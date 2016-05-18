@@ -1,0 +1,57 @@
+[data-layout~="navbar-item"]
+  [data-layout~="title"],
+  [data-layout~="subtitle"]
+    margin-bottom: 0
+  // Responsiveness
+  +mobile
+    &:not(:last-child)
+      margin-bottom: 10px
+
+[data-layout~="navbar-left"],
+[data-layout~="navbar-right"]
+  [data-layout~="navbar-item"]
+    &:not(:last-child)
+      margin-right: 10px
+    // Modifiers
+    &[data-layout~="is-flexible"]
+      flex: 1
+
+[data-layout~="navbar-left"]
+  // Responsiveness
+  +mobile
+    & + [data-layout~="navbar-right"]
+      margin-top: 20px
+  +tablet
+    align-items: center
+    display: flex
+
+[data-layout~="navbar-right"]
+  // Responsiveness
+  +tablet
+    align-items: center
+    display: flex
+    justify-content: flex-end
+
+[data-layout~="navbar"]
+  @extend [data-layout~="block"]
+  align-items: center
+  justify-content: space-between
+  code
+    border-radius: $radius
+  img
+    display: inline-block
+    vertical-align: top
+  // Modifiers
+  &[data-layout~="is-mobile"]
+    display: flex
+    & > [data-layout~="navbar-item"]
+      &:not(:last-child)
+        margin-bottom: 0
+      &:not([data-layout~="is-narrow)"]
+        flex: 1
+  // Responsiveness
+  +tablet
+    display: flex
+    & > [data-layout~="navbar-item"]
+      &:not([data-layout~="is-narrow)"]
+        flex: 1

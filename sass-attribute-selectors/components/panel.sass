@@ -1,0 +1,57 @@
+[data-layout~="panel-icon"]
+  +fa(14px, 16px)
+  color: $text-light
+  float: left
+  margin: 0 4px 0 -2px
+  [data-layout~="fa"]
+    font-size: inherit
+    line-height: inherit
+
+[data-layout~="panel-heading"]
+  background: $background
+  border-bottom: 1px solid $border
+  border-radius: 4px 4px 0 0
+  color: $text-strong
+  font-size: $size-medium
+  font-weight: 300
+  padding: 10px
+
+[data-layout~="panel-list"]
+  a
+    color: $text
+    &:hover
+      color: $link
+
+[data-layout~="panel-tabs"]
+  display: flex
+  font-size: $size-small
+  padding: 5px 10px 0
+  justify-content: center
+  a
+    border-bottom: 1px solid $border
+    margin-bottom: -1px
+    padding: 5px
+    // Modifiers
+    &[data-layout~="is-active"]
+      border-bottom-color: $link-active-border
+      color: $link-active
+  &:not(:last-child)
+    border-bottom: 1px solid $border
+
+[data-layout~="panel-block"]
+  color: $text-strong
+  display: block
+  line-height: 16px
+  padding: 10px
+  &:not(:last-child)
+    border-bottom: 1px solid $border
+
+a[data-layout~="panel-block"]
+  &:hover
+    background: $background
+
+[data-layout~="panel"]
+  border: 1px solid $border
+  border-radius: 5px
+  &:not(:last-child)
+    margin-bottom: 20px

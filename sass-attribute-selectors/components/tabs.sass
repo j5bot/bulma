@@ -1,0 +1,129 @@
+[data-layout~="tabs"]
+  @extend [data-layout~="block"]
+  @extend [data-layout~="unselectable"]
+  align-items: stretch
+  display: flex
+  justify-content: space-between
+  line-height: 24px
+  overflow: hidden
+  overflow-x: auto
+  white-space: nowrap
+  a
+    align-items: center
+    border-bottom: 1px solid $border
+    color: $text
+    display: flex
+    justify-content: center
+    margin-bottom: -1px
+    padding: 6px 12px
+    vertical-align: top
+    &:hover
+      border-bottom-color: $text-strong
+      color: $text-strong
+  li
+    display: block
+    &[data-layout~="is-active"]
+      a
+        border-bottom-color: $link
+        color: $link
+  ul
+    align-items: center
+    border-bottom: 1px solid $border
+    display: flex
+    flex: 1
+    justify-content: flex-start
+    &[data-layout~="is-left"]
+      padding-right: 10px
+    &[data-layout~="is-center"]
+      flex: none
+      justify-content: center
+      padding-left: 10px
+      padding-right: 10px
+    &[data-layout~="is-right"]
+      justify-content: flex-end
+      padding-left: 10px
+  [data-layout~="icon"]
+    &:first-child
+      margin-right: 8px
+    &:last-child
+      margin-left: 8px
+  // Alignment
+  &[data-layout~="is-centered"]
+    ul
+      justify-content: center
+  &[data-layout~="is-right"]
+    ul
+      justify-content: flex-end
+  // Styles
+  &[data-layout~="is-boxed"]
+    a
+      border: 1px solid transparent
+      border-radius: $radius $radius 0 0
+      padding-bottom: 5px
+      padding-top: 5px
+      &:hover
+        background: $background
+        border-bottom-color: $border
+    li
+      &[data-layout~="is-active"]
+        a
+          background: $white
+          border-color: $border
+          border-bottom-color: transparent !important
+  &[data-layout~="is-fullwidth"]
+    li
+      flex: 1
+  &[data-layout~="is-toggle"]
+    a
+      border: 1px solid $border
+      margin-bottom: 0
+      padding-bottom: 5px
+      padding-top: 5px
+      position: relative
+      &:hover
+        background: $background
+        border-color: $border-hover
+        z-index: 2
+    li
+      & + li
+        margin-left: -1px
+      &:first-child a
+        border-radius: $radius 0 0 $radius
+      &:last-child a
+        border-radius: 0 $radius $radius 0
+      &[data-layout~="is-active"]
+        a
+          background: $primary
+          border-color: $primary
+          color: $primary-invert
+          z-index: 1
+    ul
+      border-bottom: none
+  // Sizes
+  &[data-layout~="is-small"]
+    font-size: $size-small
+    a
+      padding: 2px 8px
+    &[data-layout~="is-boxed"],
+    &[data-layout~="is-toggle"]
+      a
+        padding-bottom: 1px
+        padding-top: 1px
+  &[data-layout~="is-medium"]
+    font-size: $size-medium
+    a
+      padding: 10px 16px
+    &[data-layout~="is-boxed"],
+    &[data-layout~="is-toggle"]
+      a
+        padding-bottom: 9px
+        padding-top: 9px
+  &[data-layout~="is-large"]
+    font-size: $size-large
+    a
+      padding: 14px 20px
+    &[data-layout~="is-boxed"],
+    &[data-layout~="is-toggle"]
+      a
+        padding-bottom: 13px
+        padding-top: 13px

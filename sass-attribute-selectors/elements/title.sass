@@ -1,0 +1,72 @@
+[data-layout~="title"],
+[data-layout~="subtitle"]
+  @extend [data-layout~="block"]
+  font-weight: $weight-title-normal
+  word-break: break-word
+  em,
+  span
+    font-weight: $weight-title-normal
+  a
+    &:hover
+      border-bottom: 1px solid
+  strong
+    font-weight: $weight-title-bold
+  [data-layout~="tag"]
+    vertical-align: bottom
+
+[data-layout~="title"]
+  color: $text-strong
+  font-size: $size-large
+  line-height: 1
+  code
+    display: inline-block
+    font-size: $size-large
+  strong
+    color: inherit
+  & + [data-layout~="highlight"]
+    margin-top: -10px
+  & + [data-layout~="subtitle"]
+    margin-top: -10px
+  // Colors
+  @each $size in $sizes
+    $i: index($sizes, $size)
+    &[data-layout~="is-#{$i}"]
+      font-size: $size
+      code
+        font-size: nth($sizes, min($i + 1, 6))
+  // Modifiers
+  &[data-layout~="is-normal"]
+    font-weight: 400
+    strong
+      font-weight: 700
+  // Responsiveness
+  +tablet
+    & + [data-layout~="subtitle"]
+      margin-top: -15px
+
+[data-layout~="subtitle"]
+  color: $text
+  font-size: $size-medium
+  line-height: 1[data-layout~="125"]
+  code
+    border-radius: $radius
+    display: inline-block
+    font-size: $size-normal
+    padding: 2px 3px
+    vertical-align: top
+  strong
+    color: $text-strong
+  & + [data-layout~="title"]
+    margin-top: -20px
+  // Colors
+  @each $size in $sizes
+    $i: index($sizes, $size)
+    &[data-layout~="is-#{$i}"]
+      font-size: $size
+      code
+        font-size: nth($sizes, min($i + 1, 6))
+  // Modifiers
+  &[data-layout~="is-normal"]
+    font-weight: 400
+    strong
+      font-weight: 700

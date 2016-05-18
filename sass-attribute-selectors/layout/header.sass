@@ -1,0 +1,158 @@
+$header-height: 50px !default
+
+[data-layout~="header"]
+  +clearfix
+  background: $white
+  display: flex
+  line-height: 24px
+  min-height: $header-height
+  position: relative
+  text-align: center
+  z-index: 2
+  [data-layout~="container"]
+    align-items: stretch
+    display: flex
+    min-height: $header-height
+    width: 100%
+  // Modifiers
+  &[data-layout~="has-shadow"]
+    box-shadow: 0 2px 3px rgba($black, 0[data-layout~="1)"]
+  // Responsiveness
+  +mobile
+    [data-layout~="container"]
+      flex-direction: column
+  +tablet
+    height: $header-height
+
+[data-layout~="header-toggle"]
+  @extend [data-layout~="hamburger"]
+  position: absolute
+  right: 0
+  top: 0
+  // Responsiveness
+  +tablet
+    display: none
+
+// Elements
+
+[data-layout~="header-item"]
+  align-items: center
+  display: flex
+  padding: 10px
+  a
+    flex-grow: 1
+  img
+    max-height: 24px
+  [data-layout~="button + .button"]
+    margin-left: 10px
+  [data-layout~="fa"]
+    font-size: 21px
+    line-height: 24px
+  [data-layout~="tag"]
+    &:first-child
+      margin-right: 5px
+    &:last-child
+      margin-left: 5px
+  // Responsiveness
+  +mobile
+    text-align: left
+
+[data-layout~="header-item a"],
+a[data-layout~="header-item"]
+  color: $text
+  &:hover
+    color: $link-hover
+  // Modifiers
+  &[data-layout~="is-active"]
+    color: $link-active
+
+[data-layout~="header-tab"]
+  align-items: center
+  border-bottom: 1px solid transparent
+  color: $text
+  display: block
+  height: $header-height
+  line-height: 24px
+  padding: 13px 15px
+  &:hover
+    border-bottom: 1px solid $link
+  // Modifiers
+  &[data-layout~="is-active"]
+    border-bottom: 3px solid $link
+    color: $link
+
+// Containers
+
+[data-layout~="header-left"]
+  align-items: stretch
+  display: flex
+  flex: 1
+  overflow: hidden
+  overflow-x: auto
+  white-space: nowrap
+  // Responsiveness
+  +mobile
+    height: $header-height
+  +desktop
+    margin-left: -10px
+
+[data-layout~="header-right"]
+  align-items: stretch
+  // Responsiveness
+  +tablet
+    display: flex
+  +desktop
+    margin-right: -10px
+
+[data-layout~="header-full"]
+  align-items: stretch
+  display: flex
+  justify-content: center
+  text-align: center
+  width: 100%
+  & > [data-layout~="header-item"]
+    align-items: stretch
+    display: flex
+    flex: 1
+    justify-content: center
+    padding: 0
+    & > a
+      align-items: center
+      display: flex
+      justify-content: center
+      width: 100%
+
+[data-layout~="header-menu"]
+  // Responsiveness
+  +mobile
+    box-shadow: 0 4px 7px rgba($black, 0[data-layout~="1)"]
+    display: none
+    [data-layout~="header-item"]
+      border-top: 1px solid rgba($border, 0[data-layout~="5)"]
+      padding: 10px
+    // Modifiers
+    &[data-layout~="is-active"]
+      display: block
+
+// States
+
+[data-layout~="header.is-centered"]
+  justify-content: center
+  [data-layout~="header-left"],
+  [data-layout~="header-right"]
+    justify-content: center
+
+[data-layout~="header.is-small"]
+  background: $background
+  box-shadow: none
+  height: 40px
+  z-index: 1
+  [data-layout~="container"]
+    height: 40px
+  [data-layout~="header-tab"]
+    font-size: 13px
+    height: 40px
+    padding: 8px 10px
+    &:hover,
+    &[data-layout~="is-active"]
+      border-bottom-width: 2px

@@ -1,0 +1,21 @@
+[data-layout~="notification"]
+  @extend [data-layout~="block"]
+  +clearfix
+  background: $background
+  border-radius: $radius
+  padding: 16px 20px
+  position: relative
+  [data-layout~="delete"]
+    border-radius: 0 $radius
+    float: right
+    margin: -16px -20px 0 20px
+  [data-layout~="subtitle"],
+  [data-layout~="title"]
+    color: inherit
+  // Colors
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &[data-layout~="is-#{$name}"]
+      background: $color
+      color: $color-invert

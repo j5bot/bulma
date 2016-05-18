@@ -1,0 +1,241 @@
+[data-layout~="column"]
+  flex: 1
+  padding: 10px
+  [data-layout~="columns.is-mobile > &.is-narrow"]
+    flex: none
+  [data-layout~="columns.is-mobile > &.is-full"]
+    flex: none
+    width: 100%
+  [data-layout~="columns.is-mobile > &.is-three-quarters"]
+    flex: none
+    width: 75%
+  [data-layout~="columns.is-mobile > &.is-two-thirds"]
+    flex: none
+    width: 66[data-layout~="6666%"]
+  [data-layout~="columns.is-mobile > &.is-half"]
+    flex: none
+    width: 50%
+  [data-layout~="columns.is-mobile > &.is-one-third"]
+    flex: none
+    width: 33[data-layout~="3333%"]
+  [data-layout~="columns.is-mobile > &.is-one-quarter"]
+    flex: none
+    width: 25%
+  [data-layout~="columns.is-mobile > &.is-offset-three-quarters"]
+    margin-left: 75%
+  [data-layout~="columns.is-mobile > &.is-offset-two-thirds"]
+    margin-left: 66[data-layout~="6666%"]
+  [data-layout~="columns.is-mobile > &.is-offset-half"]
+    margin-left: 50%
+  [data-layout~="columns.is-mobile > &.is-offset-one-third"]
+    margin-left: 33[data-layout~="3333%"]
+  [data-layout~="columns.is-mobile > &.is-offset-one-quarter"]
+    margin-left: 25%
+  @for $i from 1 through 12
+    [data-layout~="columns.is-mobile > &.is-#{$i}"]
+      flex: none
+      width: ($i / 12) * 100%
+    [data-layout~="columns.is-mobile > &.is-offset-#{$i}"]
+      margin-left: ($i / 12) * 100%
+  +mobile
+    &[data-layout~="is-narrow-mobile"]
+      flex: none
+    &[data-layout~="is-full-mobile"]
+      flex: none
+      width: 100%
+    &[data-layout~="is-three-quarters-mobile"]
+      flex: none
+      width: 75%
+    &[data-layout~="is-two-thirds-mobile"]
+      flex: none
+      width: 66[data-layout~="6666%"]
+    &[data-layout~="is-half-mobile"]
+      flex: none
+      width: 50%
+    &[data-layout~="is-one-third-mobile"]
+      flex: none
+      width: 33[data-layout~="3333%"]
+    &[data-layout~="is-one-quarter-mobile"]
+      flex: none
+      width: 25%
+    &[data-layout~="is-offset-three-quarters-mobile"]
+      margin-left: 75%
+    &[data-layout~="is-offset-two-thirds-mobile"]
+      margin-left: 66[data-layout~="6666%"]
+    &[data-layout~="is-offset-half-mobile"]
+      margin-left: 50%
+    &[data-layout~="is-offset-one-third-mobile"]
+      margin-left: 33[data-layout~="3333%"]
+    &[data-layout~="is-offset-one-quarter-mobile"]
+      margin-left: 25%
+    @for $i from 1 through 12
+      &[data-layout~="is-#{$i}-mobile"]
+        flex: none
+        width: ($i / 12) * 100%
+      &[data-layout~="is-offset-#{$i}-mobile"]
+        margin-left: ($i / 12) * 100%
+  +tablet
+    &[data-layout~="is-narrow"],
+    &[data-layout~="is-narrow-tablet"]
+      flex: none
+    &[data-layout~="is-full"],
+    &[data-layout~="is-full-tablet"]
+      flex: none
+      width: 100%
+    &[data-layout~="is-three-quarters"],
+    &[data-layout~="is-three-quarters-tablet"]
+      flex: none
+      width: 75%
+    &[data-layout~="is-two-thirds"],
+    &[data-layout~="is-two-thirds-tablet"]
+      flex: none
+      width: 66[data-layout~="6666%"]
+    &[data-layout~="is-half"],
+    &[data-layout~="is-half-tablet"]
+      flex: none
+      width: 50%
+    &[data-layout~="is-one-third"],
+    &[data-layout~="is-one-third-tablet"]
+      flex: none
+      width: 33[data-layout~="3333%"]
+    &[data-layout~="is-one-quarter"],
+    &[data-layout~="is-one-quarter-tablet"]
+      flex: none
+      width: 25%
+    &[data-layout~="is-offset-three-quarters"],
+    &[data-layout~="is-offset-three-quarters-tablet"]
+      margin-left: 75%
+    &[data-layout~="is-offset-two-thirds"],
+    &[data-layout~="is-offset-two-thirds-tablet"]
+      margin-left: 66[data-layout~="6666%"]
+    &[data-layout~="is-offset-half"],
+    &[data-layout~="is-offset-half-tablet"]
+      margin-left: 50%
+    &[data-layout~="is-offset-one-third"],
+    &[data-layout~="is-offset-one-third-tablet"]
+      margin-left: 33[data-layout~="3333%"]
+    &[data-layout~="is-offset-one-quarter"],
+    &[data-layout~="is-offset-one-quarter-tablet"]
+      margin-left: 25%
+    @for $i from 1 through 12
+      &[data-layout~="is-#{$i}"],
+      &[data-layout~="is-#{$i}-tablet"]
+        flex: none
+        width: ($i / 12) * 100%
+      &[data-layout~="is-offset-#{$i}"],
+      &[data-layout~="is-offset-#{$i}-tablet"]
+        margin-left: ($i / 12) * 100%
+  +desktop
+    &[data-layout~="is-narrow-desktop"]
+      flex: none
+    &[data-layout~="is-full-desktop"]
+      flex: none
+      width: 100%
+    &[data-layout~="is-three-quarters-desktop"]
+      flex: none
+      width: 75%
+    &[data-layout~="is-two-thirds-desktop"]
+      flex: none
+      width: 66[data-layout~="6666%"]
+    &[data-layout~="is-half-desktop"]
+      flex: none
+      width: 50%
+    &[data-layout~="is-one-third-desktop"]
+      flex: none
+      width: 33[data-layout~="3333%"]
+    &[data-layout~="is-one-quarter-desktop"]
+      flex: none
+      width: 25%
+    &[data-layout~="is-offset-three-quarters-desktop"]
+      margin-left: 75%
+    &[data-layout~="is-offset-two-thirds-desktop"]
+      margin-left: 66[data-layout~="6666%"]
+    &[data-layout~="is-offset-half-desktop"]
+      margin-left: 50%
+    &[data-layout~="is-offset-one-third-desktop"]
+      margin-left: 33[data-layout~="3333%"]
+    &[data-layout~="is-offset-one-quarter-desktop"]
+      margin-left: 25%
+    @for $i from 1 through 12
+      &[data-layout~="is-#{$i}-desktop"]
+        flex: none
+        width: ($i / 12) * 100%
+      &[data-layout~="is-offset-#{$i}-desktop"]
+        margin-left: ($i / 12) * 100%
+
+[data-layout~="columns"]
+  margin-left: -10px
+  margin-right: -10px
+  margin-top: -10px
+  &:last-child
+    margin-bottom: -10px
+  &:not(:last-child)
+    margin-bottom: 10px
+  // Modifiers
+  &[data-layout~="is-centered"]
+    justify-content: center
+  &[data-layout~="is-gapless"]
+    margin-left: 0
+    margin-right: 0
+    margin-top: 0
+    &:last-child
+      margin-bottom: 0
+    &:not(:last-child)
+      margin-bottom: 20px
+    & > [data-layout~="column"]
+      margin: 0
+      padding: 0
+  &[data-layout~="is-grid"]
+    // Responsiveness
+    +tablet
+      flex-wrap: wrap
+      & > [data-layout~="column"]
+        flex-basis: 33[data-layout~="3333%"]
+        max-width: 33[data-layout~="3333%"]
+        padding: 10px
+        width: 33[data-layout~="3333%"]
+        & + [data-layout~="column"]
+          margin-left: 0
+  &[data-layout~="is-mobile"]
+    display: flex
+  &[data-layout~="is-multiline"]
+    flex-wrap: wrap
+  &[data-layout~="is-vcentered"]
+    align-items: center
+  // Responsiveness
+  +tablet
+    &:not([data-layout~="is-desktop)"]
+      display: flex
+  +desktop
+    // Modifiers
+    &[data-layout~="is-desktop"]
+      display: flex
+
+[data-layout~="tile"]
+  align-items: stretch
+  flex: 1
+  // Modifiers
+  &[data-layout~="is-ancestor"]
+    margin-left: -10px
+    margin-right: -10px
+    margin-top: -10px
+    &:last-child
+      margin-bottom: -10px
+    &:not(:last-child)
+      margin-bottom: 10px
+  &[data-layout~="is-child"]
+    margin: 0 !important
+  &[data-layout~="is-parent"]
+    padding: 10px
+  &[data-layout~="is-vertical"]
+    flex-direction: column
+    & > [data-layout~="tile.is-child"]:not(:last-child)
+      margin-bottom: 20px !important
+  // Responsiveness
+  +tablet
+    &:not([data-layout~="is-child)"]
+      display: flex
+    @for $i from 1 through 12
+      &[data-layout~="is-#{$i}"]
+        flex: none
+        width: ($i / 12) * 100%

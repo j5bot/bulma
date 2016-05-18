@@ -1,0 +1,75 @@
+[data-layout~="modal-background"]
+  +overlay
+  background: rgba($black, 0[data-layout~="86)"]
+
+[data-layout~="modal-content"]
+  margin: 0 20px
+  max-height: calc(100vh - 160px)
+  overflow: auto
+  position: relative
+  width: 100%
+  // Responsiveness
+  +tablet
+    margin: 0 auto
+    max-height: calc(100vh - 40px)
+    width: 640px
+
+[data-layout~="modal-close"]
+  @extend [data-layout~="delete"]
+  background: none
+  height: 40px
+  position: fixed
+  right: 20px
+  top: 20px
+  width: 40px
+
+[data-layout~="modal-card"]
+  @extend [data-layout~="modal-content"]
+  background: $white
+  border-radius: 5px
+  display: flex
+  flex-direction: column
+  max-height: calc(100vh - 40px)
+  overflow: hidden
+
+[data-layout~="modal-card-head"],
+[data-layout~="modal-card-foot"]
+  align-items: center
+  background: $background
+  display: flex
+  flex-shrink: 0
+  justify-content: flex-start
+  padding: 20px
+  position: relative
+
+[data-layout~="modal-card-head"]
+  border-bottom: 1px solid $border
+
+[data-layout~="modal-card-title"]
+  color: $text-strong
+  flex: 1
+  font-size: $size-4
+  line-height: 1
+
+[data-layout~="modal-card-foot"]
+  border-top: 1px solid $border
+  [data-layout~="button"]
+    &:not(:last-child)
+      margin-right: 10px
+
+[data-layout~="modal-card-body"]
+  flex: 1
+  overflow: auto
+  padding: 20px
+
+[data-layout~="modal"]
+  +overlay
+  align-items: center
+  display: none
+  justify-content: center
+  overflow: hidden
+  position: fixed
+  z-index: 1986
+  // Modifiers
+  &[data-layout~="is-active"]
+    display: flex

@@ -1,0 +1,32 @@
+[data-layout~="progress"]
+  @extend [data-layout~="block"]
+  -moz-appearance: none
+  -webkit-appearance: none
+  border: none
+  border-radius: 290486px
+  display: block
+  height: 12px
+  overflow: hidden
+  padding: 0
+  width: 100%
+  &::-webkit-progress-bar
+    background: $border
+  &::-webkit-progress-value
+    background: $text
+  &::-moz-progress-bar
+    background: $text
+  // Colors
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    &[data-layout~="is-#{$name}"]
+      &::-webkit-progress-value
+        background: $color
+      &::-moz-progress-bar
+        background: $color
+  // Sizes
+  &[data-layout~="is-small"]
+    height: 8px
+  &[data-layout~="is-medium"]
+    height: 16px
+  &[data-layout~="is-large"]
+    height: 20px

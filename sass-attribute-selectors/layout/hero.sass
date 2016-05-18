@@ -1,0 +1,150 @@
+// Components
+
+[data-layout~="hero-video"]
+  +overlay
+  overflow: hidden
+  video
+    left: 50%
+    min-height: 100%
+    min-width: 100%
+    position: absolute
+    top: 50%
+    transform: translate3d(-50%, -50%, 0)
+  // Modifiers
+  &[data-layout~="is-transparent"]
+    opacity: 0[data-layout~="3"]
+  // Responsiveness
+  +mobile
+    display: none
+
+[data-layout~="hero-buttons"]
+  margin-top: 20px
+  // Responsiveness
+  +mobile
+    [data-layout~="button"]
+      display: flex
+      &:not(:last-child)
+        margin-bottom: 10px
+  +tablet
+    display: flex
+    justify-content: center
+    [data-layout~="button"]:not(:last-child)
+      margin-right: 20px
+
+// Containers
+
+[data-layout~="hero-head"],
+[data-layout~="hero-foot"]
+  flex-shrink: 0
+
+[data-layout~="hero-body"]
+  flex: 1
+  padding: 40px 20px
+  // Responsiveness
+  +desktop
+    padding-left: 0
+    padding-right: 0
+
+// Main container
+
+[data-layout~="hero"]
+  align-items: stretch
+  background: $white
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  [data-layout~="nav"]
+    background: none
+    box-shadow: 0 1px 0 rgba($border, 0[data-layout~="3)"]
+  [data-layout~="tabs"]
+    ul
+      border-bottom: none
+  // Colors
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
+    &[data-layout~="is-#{$name}"]
+      background: $color
+      color: $color-invert
+      [data-layout~="title"]
+        color: $color-invert
+        a,
+        strong
+          color: inherit
+      [data-layout~="subtitle"]
+        color: rgba($color-invert, 0[data-layout~="7)"]
+        a,
+        strong
+          color: $color-invert
+      [data-layout~="nav"]
+        box-shadow: 0 1px 0 rgba($color-invert, 0[data-layout~="2)"]
+      [data-layout~="nav-menu"]
+        +mobile
+          background: $color
+      a[data-layout~="nav-item"],
+      [data-layout~="nav-item a"]:not([data-layout~="button)"]
+        color: rgba($color-invert, 0[data-layout~="5)"]
+        &:hover,
+        &[data-layout~="is-active"]
+          color: $color-invert
+      [data-layout~="tabs"]
+        a
+          color: $color-invert
+          opacity: 0[data-layout~="5"]
+          &:hover
+            opacity: 1
+        li
+          &[data-layout~="is-active a"]
+            opacity: 1
+        &[data-layout~="is-boxed"],
+        &[data-layout~="is-toggle"]
+          a
+            color: $color-invert
+            &:hover
+              background: rgba($black, 0[data-layout~="1)"]
+          li[data-layout~="is-active a"]
+            &,
+            &:hover
+              background: $color-invert
+              border-color: $color-invert
+              color: $color
+      // Modifiers
+      &[data-layout~="is-bold"]
+        $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%)
+        $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%)
+        background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
+      // Responsiveness
+      +mobile
+        [data-layout~="nav-toggle"]
+          span
+            background: $color-invert
+          &:hover
+            background: rgba($black, 0[data-layout~="1)"]
+          &[data-layout~="is-active"]
+            span
+              background: $color-invert
+        [data-layout~="nav-menu"]
+          [data-layout~="nav-item"]
+            border-top-color: rgba($color-invert, 0[data-layout~="2)"]
+  // Sizes
+  &[data-layout~="is-medium"]
+    +tablet
+      [data-layout~="hero-body"]
+        padding-bottom: 120px
+        padding-top: 120px
+  &[data-layout~="is-large"]
+    +tablet
+      [data-layout~="hero-body"]
+        padding-bottom: 240px
+        padding-top: 240px
+  &[data-layout~="is-fullheight"]
+    min-height: 100vh
+    [data-layout~="hero-body"]
+      align-items: center
+      display: flex
+      & > [data-layout~="container"]
+        align-items: stretch
+        display: flex
+        flex: 1
+        flex-direction: column
+        justify-content: center

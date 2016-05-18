@@ -1,0 +1,104 @@
+// Display
+
+$displays: 'block' 'flex' 'inline' 'inline-block' 'inline-flex'
+
+@each $display in $displays
+  [data-layout~="is-#{$display}"]
+    display: #{$display}
+  [data-layout~="is-#{$display}-mobile"]
+    +mobile
+      display: #{$display} !important
+  [data-layout~="is-#{$display}-tablet"]
+    +tablet
+      display: #{$display} !important
+  [data-layout~="is-#{$display}-tablet-only"]
+    +tablet-only
+      display: #{$display} !important
+  [data-layout~="is-#{$display}-touch"]
+    +touch
+      display: #{$display} !important
+  [data-layout~="is-#{$display}-desktop"]
+    +desktop
+      display: #{$display} !important
+  [data-layout~="is-#{$display}-desktop-only"]
+    +desktop-only
+      display: #{$display} !important
+  [data-layout~="is-#{$display}-widescreen"]
+    +widescreen
+      display: #{$display} !important
+
+// Float
+
+[data-layout~="is-clearfix"]
+  +clearfix
+
+[data-layout~="is-pulled-left"]
+  float: left
+
+[data-layout~="is-pulled-right"]
+  float: right
+
+// Overflow
+
+[data-layout~="is-clipped"]
+  overflow: hidden !important
+
+// Overlay
+
+[data-layout~="is-overlay"]
+  +overlay
+
+// Text
+
+[data-layout~="has-text-centered"]
+  text-align: center
+
+[data-layout~="has-text-left"]
+  text-align: left
+
+[data-layout~="has-text-right"]
+  text-align: right
+
+// Visibility
+
+[data-layout~="is-hidden"]
+  display: none !important
+
+[data-layout~="is-hidden-mobile"]
+  +mobile
+    display: none !important
+
+[data-layout~="is-hidden-tablet"]
+  +tablet
+    display: none !important
+
+[data-layout~="is-hidden-tablet-only"]
+  +tablet-only
+    display: none !important
+
+[data-layout~="is-hidden-touch"]
+  +touch
+    display: none !important
+
+[data-layout~="is-hidden-desktop"]
+  +desktop
+    display: none !important
+
+[data-layout~="is-hidden-desktop-only"]
+  +desktop-only
+    display: none !important
+
+[data-layout~="is-hidden-widescreen"]
+  +widescreen
+    display: none !important
+
+// Other
+
+[data-layout~="is-disabled"]
+  pointer-events: none
+
+[data-layout~="is-marginless"]
+  margin: 0 !important
+
+[data-layout~="is-unselectable"]
+  @extend [data-layout~="unselectable"]
