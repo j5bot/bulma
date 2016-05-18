@@ -1,3 +1,5 @@
+THIS FORK IS INTENDED TO ADD SUPPORT TO BULMA FOR ATTRIBUTE-BASED INSTEAD OF CLASS-BASED SELECTORS
+
 # [Bulma](http://bulma.io)
 
 [![npm](https://img.shields.io/npm/v/bulma.svg)](https://www.npmjs.com/package/bulma)
