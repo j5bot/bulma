@@ -1,12 +1,12 @@
 // Components
 
-[data-layout~="nav-toggle"]
-  @extend [data-layout~="hamburger"]
+[data-am-bulma~="nav-toggle"]
+  @extend [data-am-bulma~="hamburger"]
   // Responsiveness
   +tablet
     display: none
 
-[data-layout~="nav-item"]
+[data-am-bulma~="nav-item"]
   align-items: center
   display: flex
   justify-content: center
@@ -15,9 +15,9 @@
     flex-grow: 1
   img
     max-height: 24px
-  [data-layout~="button + .button"]
+  [data-am-bulma~="button + .button"]
     margin-left: 10px
-  [data-layout~="tag"]
+  [data-am-bulma~="tag"]
     &:first-child
       margin-right: 5px
     &:last-child
@@ -26,15 +26,15 @@
   +mobile
     justify-content: flex-start
 
-[data-layout~="nav-item a"],
-a[data-layout~="nav-item"]
+[data-am-bulma~="nav-item a"],
+a[data-am-bulma~="nav-item"]
   color: $text
   &:hover
     color: $link-hover
   // Modifiers
-  &[data-layout~="is-active"]
+  &[data-am-bulma~="is-active"]
     color: $link-active
-  &[data-layout~="is-tab"]
+  &[data-am-bulma~="is-tab"]
     border-bottom: 1px solid transparent
     border-top: 1px solid transparent
     padding-left: 12px
@@ -42,30 +42,30 @@ a[data-layout~="nav-item"]
     &:hover
       border-bottom: 1px solid $link
       border-top: 1px solid transparent
-    &[data-layout~="is-active"]
+    &[data-am-bulma~="is-active"]
       border-bottom: 3px solid $link
       border-top: 3px solid transparent
       color: $link
 
 // Containers
 
-[data-layout~="nav-menu"]
+[data-am-bulma~="nav-menu"]
   // Responsiveness
   +mobile
     background: $white
-    box-shadow: 0 4px 7px rgba($black, 0[data-layout~="1)"]
+    box-shadow: 0 4px 7px rgba($black, 0[data-am-bulma~="1)"]
     left: 0
     display: none
     right: 0
     top: 100%
     position: absolute
-    [data-layout~="nav-item"]
-      border-top: 1px solid rgba($border, 0[data-layout~="5)"]
+    [data-am-bulma~="nav-item"]
+      border-top: 1px solid rgba($border, 0[data-am-bulma~="5)"]
       padding: 10px
-    &[data-layout~="is-active"]
+    &[data-am-bulma~="is-active"]
       display: block
 
-[data-layout~="nav-left"]
+[data-am-bulma~="nav-left"]
   align-items: stretch
   display: flex
   flex: 1
@@ -74,12 +74,12 @@ a[data-layout~="nav-item"]
   overflow-x: auto
   white-space: nowrap
 
-[data-layout~="nav-center"]
+[data-am-bulma~="nav-center"]
   align-items: stretch
   display: flex
   justify-content: center
 
-[data-layout~="nav-right"]
+[data-am-bulma~="nav-right"]
   // Responsiveness
   +tablet
     align-items: stretch
@@ -89,7 +89,7 @@ a[data-layout~="nav-item"]
 
 // Main container
 
-[data-layout~="nav"]
+[data-am-bulma~="nav"]
   align-items: stretch
   background: $white
   display: flex
@@ -97,24 +97,24 @@ a[data-layout~="nav-item"]
   position: relative
   text-align: center
   z-index: 2
-  & > [data-layout~="container"]
+  & > [data-am-bulma~="container"]
     align-items: stretch
     display: flex
     min-height: $nav-height
     width: 100%
-    & > [data-layout~="nav-left"]
-      & > [data-layout~="nav-item"]:first-child:not([data-layout~="is-tab)"]
+    & > [data-am-bulma~="nav-left"]
+      & > [data-am-bulma~="nav-item"]:first-child:not([data-am-bulma~="is-tab)"]
         padding-left: 0
-    & > [data-layout~="nav-right"]
-      & > [data-layout~="nav-item"]:last-child:not([data-layout~="is-tab)"]
+    & > [data-am-bulma~="nav-right"]
+      & > [data-am-bulma~="nav-item"]:last-child:not([data-am-bulma~="is-tab)"]
         padding-right: 0
-  [data-layout~="container > &"]
-    & > [data-layout~="nav-left"]
-      & > [data-layout~="nav-item"]:first-child:not([data-layout~="is-tab)"]
+  [data-am-bulma~="container > &"]
+    & > [data-am-bulma~="nav-left"]
+      & > [data-am-bulma~="nav-item"]:first-child:not([data-am-bulma~="is-tab)"]
         padding-left: 0
-    & > [data-layout~="nav-right"]
-      & > [data-layout~="nav-item"]:last-child:not([data-layout~="is-tab)"]
+    & > [data-am-bulma~="nav-right"]
+      & > [data-am-bulma~="nav-item"]:last-child:not([data-am-bulma~="is-tab)"]
         padding-right: 0
   // Modifiers
-  &[data-layout~="has-shadow"]
-    box-shadow: 0 2px 3px rgba($black, 0[data-layout~="1)"]
+  &[data-am-bulma~="has-shadow"]
+    box-shadow: 0 2px 3px rgba($black, 0[data-am-bulma~="1)"]

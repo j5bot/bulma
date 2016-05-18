@@ -1,39 +1,39 @@
-[data-layout~="navbar-item"]
-  [data-layout~="title"],
-  [data-layout~="subtitle"]
+[data-am-bulma~="navbar-item"]
+  [data-am-bulma~="title"],
+  [data-am-bulma~="subtitle"]
     margin-bottom: 0
   // Responsiveness
   +mobile
     &:not(:last-child)
       margin-bottom: 10px
 
-[data-layout~="navbar-left"],
-[data-layout~="navbar-right"]
-  [data-layout~="navbar-item"]
+[data-am-bulma~="navbar-left"],
+[data-am-bulma~="navbar-right"]
+  [data-am-bulma~="navbar-item"]
     &:not(:last-child)
       margin-right: 10px
     // Modifiers
-    &[data-layout~="is-flexible"]
+    &[data-am-bulma~="is-flexible"]
       flex: 1
 
-[data-layout~="navbar-left"]
+[data-am-bulma~="navbar-left"]
   // Responsiveness
   +mobile
-    & + [data-layout~="navbar-right"]
+    & + [data-am-bulma~="navbar-right"]
       margin-top: 20px
   +tablet
     align-items: center
     display: flex
 
-[data-layout~="navbar-right"]
+[data-am-bulma~="navbar-right"]
   // Responsiveness
   +tablet
     align-items: center
     display: flex
     justify-content: flex-end
 
-[data-layout~="navbar"]
-  @extend [data-layout~="block"]
+[data-am-bulma~="navbar"]
+  @extend [data-am-bulma~="block"]
   align-items: center
   justify-content: space-between
   code
@@ -42,16 +42,16 @@
     display: inline-block
     vertical-align: top
   // Modifiers
-  &[data-layout~="is-mobile"]
+  &[data-am-bulma~="is-mobile"]
     display: flex
-    & > [data-layout~="navbar-item"]
+    & > [data-am-bulma~="navbar-item"]
       &:not(:last-child)
         margin-bottom: 0
-      &:not([data-layout~="is-narrow)"]
+      &:not([data-am-bulma~="is-narrow)"]
         flex: 1
   // Responsiveness
   +tablet
     display: flex
-    & > [data-layout~="navbar-item"]
-      &:not([data-layout~="is-narrow)"]
+    & > [data-am-bulma~="navbar-item"]
+      &:not([data-am-bulma~="is-narrow)"]
         flex: 1

@@ -1,6 +1,6 @@
 // Components
 
-[data-layout~="hero-video"]
+[data-am-bulma~="hero-video"]
   +overlay
   overflow: hidden
   video
@@ -11,33 +11,33 @@
     top: 50%
     transform: translate3d(-50%, -50%, 0)
   // Modifiers
-  &[data-layout~="is-transparent"]
-    opacity: 0[data-layout~="3"]
+  &[data-am-bulma~="is-transparent"]
+    opacity: 0[data-am-bulma~="3"]
   // Responsiveness
   +mobile
     display: none
 
-[data-layout~="hero-buttons"]
+[data-am-bulma~="hero-buttons"]
   margin-top: 20px
   // Responsiveness
   +mobile
-    [data-layout~="button"]
+    [data-am-bulma~="button"]
       display: flex
       &:not(:last-child)
         margin-bottom: 10px
   +tablet
     display: flex
     justify-content: center
-    [data-layout~="button"]:not(:last-child)
+    [data-am-bulma~="button"]:not(:last-child)
       margin-right: 20px
 
 // Containers
 
-[data-layout~="hero-head"],
-[data-layout~="hero-foot"]
+[data-am-bulma~="hero-head"],
+[data-am-bulma~="hero-foot"]
   flex-shrink: 0
 
-[data-layout~="hero-body"]
+[data-am-bulma~="hero-body"]
   flex: 1
   padding: 40px 20px
   // Responsiveness
@@ -47,102 +47,102 @@
 
 // Main container
 
-[data-layout~="hero"]
+[data-am-bulma~="hero"]
   align-items: stretch
   background: $white
   display: flex
   flex-direction: column
   justify-content: space-between
-  [data-layout~="nav"]
+  [data-am-bulma~="nav"]
     background: none
-    box-shadow: 0 1px 0 rgba($border, 0[data-layout~="3)"]
-  [data-layout~="tabs"]
+    box-shadow: 0 1px 0 rgba($border, 0[data-am-bulma~="3)"]
+  [data-am-bulma~="tabs"]
     ul
       border-bottom: none
   // Colors
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
-    &[data-layout~="is-#{$name}"]
+    &[data-am-bulma~="is-#{$name}"]
       background: $color
       color: $color-invert
-      [data-layout~="title"]
+      [data-am-bulma~="title"]
         color: $color-invert
         a,
         strong
           color: inherit
-      [data-layout~="subtitle"]
-        color: rgba($color-invert, 0[data-layout~="7)"]
+      [data-am-bulma~="subtitle"]
+        color: rgba($color-invert, 0[data-am-bulma~="7)"]
         a,
         strong
           color: $color-invert
-      [data-layout~="nav"]
-        box-shadow: 0 1px 0 rgba($color-invert, 0[data-layout~="2)"]
-      [data-layout~="nav-menu"]
+      [data-am-bulma~="nav"]
+        box-shadow: 0 1px 0 rgba($color-invert, 0[data-am-bulma~="2)"]
+      [data-am-bulma~="nav-menu"]
         +mobile
           background: $color
-      a[data-layout~="nav-item"],
-      [data-layout~="nav-item a"]:not([data-layout~="button)"]
-        color: rgba($color-invert, 0[data-layout~="5)"]
+      a[data-am-bulma~="nav-item"],
+      [data-am-bulma~="nav-item a"]:not([data-am-bulma~="button)"]
+        color: rgba($color-invert, 0[data-am-bulma~="5)"]
         &:hover,
-        &[data-layout~="is-active"]
+        &[data-am-bulma~="is-active"]
           color: $color-invert
-      [data-layout~="tabs"]
+      [data-am-bulma~="tabs"]
         a
           color: $color-invert
-          opacity: 0[data-layout~="5"]
+          opacity: 0[data-am-bulma~="5"]
           &:hover
             opacity: 1
         li
-          &[data-layout~="is-active a"]
+          &[data-am-bulma~="is-active a"]
             opacity: 1
-        &[data-layout~="is-boxed"],
-        &[data-layout~="is-toggle"]
+        &[data-am-bulma~="is-boxed"],
+        &[data-am-bulma~="is-toggle"]
           a
             color: $color-invert
             &:hover
-              background: rgba($black, 0[data-layout~="1)"]
-          li[data-layout~="is-active a"]
+              background: rgba($black, 0[data-am-bulma~="1)"]
+          li[data-am-bulma~="is-active a"]
             &,
             &:hover
               background: $color-invert
               border-color: $color-invert
               color: $color
       // Modifiers
-      &[data-layout~="is-bold"]
+      &[data-am-bulma~="is-bold"]
         $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%)
         $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%)
         background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
       // Responsiveness
       +mobile
-        [data-layout~="nav-toggle"]
+        [data-am-bulma~="nav-toggle"]
           span
             background: $color-invert
           &:hover
-            background: rgba($black, 0[data-layout~="1)"]
-          &[data-layout~="is-active"]
+            background: rgba($black, 0[data-am-bulma~="1)"]
+          &[data-am-bulma~="is-active"]
             span
               background: $color-invert
-        [data-layout~="nav-menu"]
-          [data-layout~="nav-item"]
-            border-top-color: rgba($color-invert, 0[data-layout~="2)"]
+        [data-am-bulma~="nav-menu"]
+          [data-am-bulma~="nav-item"]
+            border-top-color: rgba($color-invert, 0[data-am-bulma~="2)"]
   // Sizes
-  &[data-layout~="is-medium"]
+  &[data-am-bulma~="is-medium"]
     +tablet
-      [data-layout~="hero-body"]
+      [data-am-bulma~="hero-body"]
         padding-bottom: 120px
         padding-top: 120px
-  &[data-layout~="is-large"]
+  &[data-am-bulma~="is-large"]
     +tablet
-      [data-layout~="hero-body"]
+      [data-am-bulma~="hero-body"]
         padding-bottom: 240px
         padding-top: 240px
-  &[data-layout~="is-fullheight"]
+  &[data-am-bulma~="is-fullheight"]
     min-height: 100vh
-    [data-layout~="hero-body"]
+    [data-am-bulma~="hero-body"]
       align-items: center
       display: flex
-      & > [data-layout~="container"]
+      & > [data-am-bulma~="container"]
         align-items: stretch
         display: flex
         flex: 1

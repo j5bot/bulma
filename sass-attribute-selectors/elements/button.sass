@@ -16,9 +16,9 @@
   padding-left: 20px
   padding-right: 20px
 
-[data-layout~="button"]
+[data-am-bulma~="button"]
   +control
-  @extend [data-layout~="unselectable"]
+  @extend [data-am-bulma~="unselectable"]
   justify-content: center
   padding-left: 10px
   padding-right: 10px
@@ -31,8 +31,8 @@
     font-size: $size-small
     line-height: 1
     margin-top: 5px
-  [data-layout~="icon"],
-  [data-layout~="tag"]
+  [data-am-bulma~="icon"],
+  [data-am-bulma~="tag"]
     &:first-child
       margin-left: -2px
       margin-right: 4px
@@ -42,12 +42,12 @@
   &:hover
     color: $control-hover
   &:active
-    box-shadow: inset 0 1px 2px rgba($black, 0[data-layout~="2)"]
+    box-shadow: inset 0 1px 2px rgba($black, 0[data-am-bulma~="2)"]
   // Colors
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
-    &[data-layout~="is-#{$name}"]
+    &[data-am-bulma~="is-#{$name}"]
       background: $color
       border-color: transparent
       color: $color-invert
@@ -58,15 +58,15 @@
         color: $color-invert
       &:active
         border-color: transparent
-      &[data-layout~="is-inverted"]
+      &[data-am-bulma~="is-inverted"]
         background: $color-invert
         color: $color
         &:hover
           background: darken($color-invert, 5%)
-      &[data-layout~="is-loading"]
+      &[data-am-bulma~="is-loading"]
         &:after
           border-color: transparent transparent $color-invert $color-invert !important
-      &[data-layout~="is-outlined"]
+      &[data-am-bulma~="is-outlined"]
         background: transparent
         border-color: $color
         color: $color
@@ -75,7 +75,7 @@
           background: $color
           border-color: $color
           color: $color-invert
-  &[data-layout~="is-link"]
+  &[data-am-bulma~="is-link"]
     background: transparent
     border-color: transparent
     color: $text
@@ -85,23 +85,23 @@
       background: $border
       color: $text-strong
   // Sizes
-  &[data-layout~="is-small"]
+  &[data-am-bulma~="is-small"]
     +button-small
-  &[data-layout~="is-medium"]
+  &[data-am-bulma~="is-medium"]
     +button-medium
-  &[data-layout~="is-large"]
+  &[data-am-bulma~="is-large"]
     +button-large
   // Modifiers
   &[disabled],
-  &[data-layout~="is-disabled"]
-    opacity: 0[data-layout~="5"]
-  &[data-layout~="is-fullwidth"]
+  &[data-am-bulma~="is-disabled"]
+    opacity: 0[data-am-bulma~="5"]
+  &[data-am-bulma~="is-fullwidth"]
     display: block
     width: 100%
-  &[data-layout~="is-loading"]
+  &[data-am-bulma~="is-loading"]
     color: transparent !important
     pointer-events: none
     &:after
-      @extend [data-layout~="loader"]
+      @extend [data-am-bulma~="loader"]
       +center(16px)
       position: absolute !important

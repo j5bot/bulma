@@ -2,44 +2,44 @@
   +control
   @each $name, $pair in $colors
     $color: nth($pair, 1)
-    &[data-layout~="is-#{$name}"]
+    &[data-am-bulma~="is-#{$name}"]
       border-color: $color
 
-[data-layout~="input"]
+[data-am-bulma~="input"]
   +form-control
-  box-shadow: inset 0 1px 2px rgba($black, 0[data-layout~="1)"]
+  box-shadow: inset 0 1px 2px rgba($black, 0[data-am-bulma~="1)"]
   max-width: 100%
   width: 100%
   &[type="search"]
     border-radius: 290486px
   // Sizes
-  &[data-layout~="is-small"]
+  &[data-am-bulma~="is-small"]
     +control-small
-    &[data-layout~="is-flat"]
+    &[data-am-bulma~="is-flat"]
       padding: 4px 6px
-  &[data-layout~="is-medium"]
+  &[data-am-bulma~="is-medium"]
     +control-medium
-    &[data-layout~="is-flat"]
+    &[data-am-bulma~="is-flat"]
       padding: 4px 10px
-  &[data-layout~="is-large"]
+  &[data-am-bulma~="is-large"]
     +control-large
-    &[data-layout~="is-flat"]
+    &[data-am-bulma~="is-flat"]
       padding: 4px 12px
   // Modifiers
-  &[data-layout~="is-flat"]
+  &[data-am-bulma~="is-flat"]
     border: none
     box-shadow: none
-  &[data-layout~="is-fullwidth"]
+  &[data-am-bulma~="is-fullwidth"]
     display: block
     width: 100%
-  &[data-layout~="is-inline"]
+  &[data-am-bulma~="is-inline"]
     display: inline
     width: auto
 
-[data-layout~="textarea"]
-  @extend [data-layout~="input"]
+[data-am-bulma~="textarea"]
+  @extend [data-am-bulma~="input"]
   display: block
-  line-height: 1[data-layout~="2"]
+  line-height: 1[data-am-bulma~="2"]
   max-height: 600px
   max-width: 100%
   min-height: 120px
@@ -57,21 +57,21 @@
     cursor: pointer
   &:hover
     color: $control-hover
-  &[data-layout~="is-disabled"]
+  &[data-am-bulma~="is-disabled"]
     color: $text-light
     pointer-events: none
     input
       pointer-events: none
 
-[data-layout~="checkbox"]
+[data-am-bulma~="checkbox"]
   @extend %control-with-element
 
-[data-layout~="radio"]
+[data-am-bulma~="radio"]
   @extend %control-with-element
-  & + [data-layout~="radio"]
+  & + [data-am-bulma~="radio"]
     margin-left: 10px
 
-[data-layout~="select"]
+[data-am-bulma~="select"]
   display: inline-block
   height: 32px
   position: relative
@@ -86,7 +86,7 @@
       border-color: $control-hover-border
     &::ms-expand
       display: none
-  &[data-layout~="is-fullwidth"]
+  &[data-am-bulma~="is-fullwidth"]
     width: 100%
     select
       width: 100%
@@ -99,25 +99,25 @@
     &:after
       border-color: $link-hover
 
-[data-layout~="label"]
+[data-am-bulma~="label"]
   color: $text-strong
   display: block
   font-weight: bold
   &:not(:last-child)
     margin-bottom: 5px
 
-[data-layout~="help"]
+[data-am-bulma~="help"]
   display: block
   font-size: $size-small
   margin-top: 5px
   @each $name, $pair in $colors
     $color: nth($pair, 1)
-    &[data-layout~="is-#{$name}"]
+    &[data-am-bulma~="is-#{$name}"]
       color: $color
 
 // Containers
 
-[data-layout~="control-label"]
+[data-am-bulma~="control-label"]
   +mobile
     margin-bottom: 5px
   +tablet
@@ -126,18 +126,18 @@
     padding-top: 7px
     text-align: right
 
-[data-layout~="control"]
+[data-am-bulma~="control"]
   position: relative
   text-align: left
   &:not(:last-child)
     margin-bottom: 10px
   // Modifiers
-  &[data-layout~="has-addons"]
+  &[data-am-bulma~="has-addons"]
     display: flex
     justify-content: flex-start
-    [data-layout~="button"],
-    [data-layout~="input"],
-    [data-layout~="select"]
+    [data-am-bulma~="button"],
+    [data-am-bulma~="input"],
+    [data-am-bulma~="select"]
       border-radius: 0
       margin-right: -1px
       &:hover
@@ -153,87 +153,87 @@
         border-radius: 0 $radius $radius 0
         select
           border-radius: 0 $radius $radius 0
-    &[data-layout~="has-addons-centered"]
+    &[data-am-bulma~="has-addons-centered"]
       justify-content: center
-    &[data-layout~="has-addons-right"]
+    &[data-am-bulma~="has-addons-right"]
       justify-content: flex-end
-  &[data-layout~="has-icon"]
-    & > [data-layout~="fa"]
+  &[data-am-bulma~="has-icon"]
+    & > [data-am-bulma~="fa"]
       +fa(14px, 24px)
       color: $text-light
       pointer-events: none
       position: absolute
       top: 4px
       z-index: 4
-    [data-layout~="input"]
-      &:focus + [data-layout~="fa"]
+    [data-am-bulma~="input"]
+      &:focus + [data-am-bulma~="fa"]
         color: $text-strong
-      &[data-layout~="is-small + .fa"]
-        font-size: 10[data-layout~="5px"]
+      &[data-am-bulma~="is-small + .fa"]
+        font-size: 10[data-am-bulma~="5px"]
         top: 0
-      &[data-layout~="is-medium + .fa"]
+      &[data-am-bulma~="is-medium + .fa"]
         font-size: 21px
         top: 8px
-      &[data-layout~="is-large + .fa"]
+      &[data-am-bulma~="is-large + .fa"]
         font-size: 21px
         top: 12px
-    &:not([data-layout~="has-icon-right)"]
-      & > [data-layout~="fa"]
+    &:not([data-am-bulma~="has-icon-right)"]
+      & > [data-am-bulma~="fa"]
         left: 4px
-      [data-layout~="input"]
+      [data-am-bulma~="input"]
         padding-left: 32px
-        &[data-layout~="is-small"]
+        &[data-am-bulma~="is-small"]
           padding-left: 24px
-          & + [data-layout~="fa"]
+          & + [data-am-bulma~="fa"]
             left: 0
-        &[data-layout~="is-medium"]
+        &[data-am-bulma~="is-medium"]
           padding-left: 40px
-          & + [data-layout~="fa"]
+          & + [data-am-bulma~="fa"]
             left: 8px
-        &[data-layout~="is-large"]
+        &[data-am-bulma~="is-large"]
           padding-left: 48px
-          & + [data-layout~="fa"]
+          & + [data-am-bulma~="fa"]
             left: 12px
-    &[data-layout~="has-icon-right"]
-      & > [data-layout~="fa"]
+    &[data-am-bulma~="has-icon-right"]
+      & > [data-am-bulma~="fa"]
         right: 4px
-      [data-layout~="input"]
+      [data-am-bulma~="input"]
         padding-right: 32px
-        &[data-layout~="is-small"]
+        &[data-am-bulma~="is-small"]
           padding-right: 24px
-          & + [data-layout~="fa"]
+          & + [data-am-bulma~="fa"]
             right: 0
-        &[data-layout~="is-medium"]
+        &[data-am-bulma~="is-medium"]
           padding-right: 40px
-          & + [data-layout~="fa"]
+          & + [data-am-bulma~="fa"]
             right: 8px
-        &[data-layout~="is-large"]
+        &[data-am-bulma~="is-large"]
           padding-right: 48px
-          & + [data-layout~="fa"]
+          & + [data-am-bulma~="fa"]
             right: 12px
-  &[data-layout~="is-grouped"]
+  &[data-am-bulma~="is-grouped"]
     display: flex
     justify-content: flex-start
-    & > [data-layout~="button"],
-    & > [data-layout~="input"],
-    & > [data-layout~="select"]
+    & > [data-am-bulma~="button"],
+    & > [data-am-bulma~="input"],
+    & > [data-am-bulma~="select"]
       &:not(:last-child)
         margin-right: 10px
-    & > [data-layout~="input"]
+    & > [data-am-bulma~="input"]
       flex: 1
-    &[data-layout~="is-grouped-centered"]
+    &[data-am-bulma~="is-grouped-centered"]
       justify-content: center
-    &[data-layout~="is-grouped-right"]
+    &[data-am-bulma~="is-grouped-right"]
       justify-content: flex-end
-  &[data-layout~="is-horizontal"]
+  &[data-am-bulma~="is-horizontal"]
     +tablet
       display: flex
-      & > [data-layout~="control"]
+      & > [data-am-bulma~="control"]
         display: flex
         flex: 5
-  &[data-layout~="is-loading"]
+  &[data-am-bulma~="is-loading"]
     &:after
-      @extend [data-layout~="loader"]
+      @extend [data-am-bulma~="loader"]
       position: absolute !important
       right: 8px
       top: 8px

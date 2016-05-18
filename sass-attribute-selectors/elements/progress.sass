@@ -1,5 +1,5 @@
-[data-layout~="progress"]
-  @extend [data-layout~="block"]
+[data-am-bulma~="progress"]
+  @extend [data-am-bulma~="block"]
   -moz-appearance: none
   -webkit-appearance: none
   border: none
@@ -18,15 +18,15 @@
   // Colors
   @each $name, $pair in $colors
     $color: nth($pair, 1)
-    &[data-layout~="is-#{$name}"]
+    &[data-am-bulma~="is-#{$name}"]
       &::-webkit-progress-value
         background: $color
       &::-moz-progress-bar
         background: $color
   // Sizes
-  &[data-layout~="is-small"]
+  &[data-am-bulma~="is-small"]
     height: 8px
-  &[data-layout~="is-medium"]
+  &[data-am-bulma~="is-medium"]
     height: 16px
-  &[data-layout~="is-large"]
+  &[data-am-bulma~="is-large"]
     height: 20px

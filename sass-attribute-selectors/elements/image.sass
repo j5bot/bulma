@@ -1,34 +1,34 @@
 $dimensions: 16 24 32 48 64 96 128
 
-[data-layout~="image"]
+[data-am-bulma~="image"]
   display: block
   position: relative
   img
     display: block
   // Ratio
-  &[data-layout~="is-square"],
-  &[data-layout~="is-1by1"],
-  &[data-layout~="is-4by3"],
-  &[data-layout~="is-3by2"],
-  &[data-layout~="is-16by9"],
-  &[data-layout~="is-2by1"]
+  &[data-am-bulma~="is-square"],
+  &[data-am-bulma~="is-1by1"],
+  &[data-am-bulma~="is-4by3"],
+  &[data-am-bulma~="is-3by2"],
+  &[data-am-bulma~="is-16by9"],
+  &[data-am-bulma~="is-2by1"]
     img
       +overlay
       height: 100%
       width: 100%
-  &[data-layout~="is-square"],
-  &[data-layout~="is-1by1"]
+  &[data-am-bulma~="is-square"],
+  &[data-am-bulma~="is-1by1"]
     padding-top: 100%
-  &[data-layout~="is-4by3"]
+  &[data-am-bulma~="is-4by3"]
     padding-top: 75%
-  &[data-layout~="is-3by2"]
-    padding-top: 66[data-layout~="6666%"]
-  &[data-layout~="is-16by9"]
-    padding-top: 56[data-layout~="25%"]
-  &[data-layout~="is-2by1"]
+  &[data-am-bulma~="is-3by2"]
+    padding-top: 66[data-am-bulma~="6666%"]
+  &[data-am-bulma~="is-16by9"]
+    padding-top: 56[data-am-bulma~="25%"]
+  &[data-am-bulma~="is-2by1"]
     padding-top: 50%
   // Sizes
   @each $dimension in $dimensions
-    &[data-layout~="is-#{$dimension}x#{$dimension}"]
+    &[data-am-bulma~="is-#{$dimension}x#{$dimension}"]
       height: $dimension * 1px
       width: $dimension * 1px

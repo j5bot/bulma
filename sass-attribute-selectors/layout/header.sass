@@ -1,6 +1,6 @@
 $header-height: 50px !default
 
-[data-layout~="header"]
+[data-am-bulma~="header"]
   +clearfix
   background: $white
   display: flex
@@ -9,23 +9,23 @@ $header-height: 50px !default
   position: relative
   text-align: center
   z-index: 2
-  [data-layout~="container"]
+  [data-am-bulma~="container"]
     align-items: stretch
     display: flex
     min-height: $header-height
     width: 100%
   // Modifiers
-  &[data-layout~="has-shadow"]
-    box-shadow: 0 2px 3px rgba($black, 0[data-layout~="1)"]
+  &[data-am-bulma~="has-shadow"]
+    box-shadow: 0 2px 3px rgba($black, 0[data-am-bulma~="1)"]
   // Responsiveness
   +mobile
-    [data-layout~="container"]
+    [data-am-bulma~="container"]
       flex-direction: column
   +tablet
     height: $header-height
 
-[data-layout~="header-toggle"]
-  @extend [data-layout~="hamburger"]
+[data-am-bulma~="header-toggle"]
+  @extend [data-am-bulma~="hamburger"]
   position: absolute
   right: 0
   top: 0
@@ -35,7 +35,7 @@ $header-height: 50px !default
 
 // Elements
 
-[data-layout~="header-item"]
+[data-am-bulma~="header-item"]
   align-items: center
   display: flex
   padding: 10px
@@ -43,12 +43,12 @@ $header-height: 50px !default
     flex-grow: 1
   img
     max-height: 24px
-  [data-layout~="button + .button"]
+  [data-am-bulma~="button + .button"]
     margin-left: 10px
-  [data-layout~="fa"]
+  [data-am-bulma~="fa"]
     font-size: 21px
     line-height: 24px
-  [data-layout~="tag"]
+  [data-am-bulma~="tag"]
     &:first-child
       margin-right: 5px
     &:last-child
@@ -57,16 +57,16 @@ $header-height: 50px !default
   +mobile
     text-align: left
 
-[data-layout~="header-item a"],
-a[data-layout~="header-item"]
+[data-am-bulma~="header-item a"],
+a[data-am-bulma~="header-item"]
   color: $text
   &:hover
     color: $link-hover
   // Modifiers
-  &[data-layout~="is-active"]
+  &[data-am-bulma~="is-active"]
     color: $link-active
 
-[data-layout~="header-tab"]
+[data-am-bulma~="header-tab"]
   align-items: center
   border-bottom: 1px solid transparent
   color: $text
@@ -77,13 +77,13 @@ a[data-layout~="header-item"]
   &:hover
     border-bottom: 1px solid $link
   // Modifiers
-  &[data-layout~="is-active"]
+  &[data-am-bulma~="is-active"]
     border-bottom: 3px solid $link
     color: $link
 
 // Containers
 
-[data-layout~="header-left"]
+[data-am-bulma~="header-left"]
   align-items: stretch
   display: flex
   flex: 1
@@ -96,7 +96,7 @@ a[data-layout~="header-item"]
   +desktop
     margin-left: -10px
 
-[data-layout~="header-right"]
+[data-am-bulma~="header-right"]
   align-items: stretch
   // Responsiveness
   +tablet
@@ -104,13 +104,13 @@ a[data-layout~="header-item"]
   +desktop
     margin-right: -10px
 
-[data-layout~="header-full"]
+[data-am-bulma~="header-full"]
   align-items: stretch
   display: flex
   justify-content: center
   text-align: center
   width: 100%
-  & > [data-layout~="header-item"]
+  & > [data-am-bulma~="header-item"]
     align-items: stretch
     display: flex
     flex: 1
@@ -122,37 +122,37 @@ a[data-layout~="header-item"]
       justify-content: center
       width: 100%
 
-[data-layout~="header-menu"]
+[data-am-bulma~="header-menu"]
   // Responsiveness
   +mobile
-    box-shadow: 0 4px 7px rgba($black, 0[data-layout~="1)"]
+    box-shadow: 0 4px 7px rgba($black, 0[data-am-bulma~="1)"]
     display: none
-    [data-layout~="header-item"]
-      border-top: 1px solid rgba($border, 0[data-layout~="5)"]
+    [data-am-bulma~="header-item"]
+      border-top: 1px solid rgba($border, 0[data-am-bulma~="5)"]
       padding: 10px
     // Modifiers
-    &[data-layout~="is-active"]
+    &[data-am-bulma~="is-active"]
       display: block
 
 // States
 
-[data-layout~="header.is-centered"]
+[data-am-bulma~="header.is-centered"]
   justify-content: center
-  [data-layout~="header-left"],
-  [data-layout~="header-right"]
+  [data-am-bulma~="header-left"],
+  [data-am-bulma~="header-right"]
     justify-content: center
 
-[data-layout~="header.is-small"]
+[data-am-bulma~="header.is-small"]
   background: $background
   box-shadow: none
   height: 40px
   z-index: 1
-  [data-layout~="container"]
+  [data-am-bulma~="container"]
     height: 40px
-  [data-layout~="header-tab"]
+  [data-am-bulma~="header-tab"]
     font-size: 13px
     height: 40px
     padding: 8px 10px
     &:hover,
-    &[data-layout~="is-active"]
+    &[data-am-bulma~="is-active"]
       border-bottom-width: 2px

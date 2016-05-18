@@ -6,7 +6,7 @@ cp -R sass sass-attribute-selectors
 
 pushd sass-attribute-selectors
 
-grep -r '^\s*\.' -l --null . | xargs -0 sed -i '' 's#\.\([^\:,]*\)#[data-layout~="\1"]#g'
+grep -r '^\s*\.' -l --null . | xargs -0 sed -i '' 's#\.\([^\:,]*\)#[data-am-bulma~="\1"]#g'
 
 popd
 

@@ -1,4 +1,4 @@
-[data-layout~="media-number"]
+[data-am-bulma~="media-number"]
   background: $background
   border-radius: 290486px
   display: inline-block
@@ -15,49 +15,49 @@
   +tablet
     margin-right: 10px
 
-[data-layout~="media-left"]
+[data-am-bulma~="media-left"]
   margin-right: 10px
 
-[data-layout~="media-right"]
+[data-am-bulma~="media-right"]
   margin-left: 10px
 
-[data-layout~="media-content"]
+[data-am-bulma~="media-content"]
   flex: 1
   text-align: left
 
-[data-layout~="media"]
+[data-am-bulma~="media"]
   align-items: flex-start
   display: flex
   text-align: left
-  [data-layout~="content"]:not(:last-child)
+  [data-am-bulma~="content"]:not(:last-child)
     margin-bottom: 10px
-  [data-layout~="media"]
-    border-top: 1px solid rgba($border, 0[data-layout~="5)"]
+  [data-am-bulma~="media"]
+    border-top: 1px solid rgba($border, 0[data-am-bulma~="5)"]
     display: flex
     padding-top: 10px
-    [data-layout~="textarea"]
+    [data-am-bulma~="textarea"]
       +control-small
-    [data-layout~="button"]
+    [data-am-bulma~="button"]
       +button-small
-    [data-layout~="content"]:not(:last-child),
-    [data-layout~="control"]:not(:last-child)
+    [data-am-bulma~="content"]:not(:last-child),
+    [data-am-bulma~="control"]:not(:last-child)
       margin-bottom: 5px
-    [data-layout~="media"]
+    [data-am-bulma~="media"]
       font-size: 12px
       padding-top: 5px
-      & + [data-layout~="media"]
+      & + [data-am-bulma~="media"]
         margin-top: 5px
-  & + [data-layout~="media"]
-    border-top: 1px solid rgba($border, 0[data-layout~="5)"]
+  & + [data-am-bulma~="media"]
+    border-top: 1px solid rgba($border, 0[data-am-bulma~="5)"]
     margin-top: 10px
     padding-top: 10px
   // Sizes
-  &[data-layout~="is-large"]
-    & + [data-layout~="media"]
+  &[data-am-bulma~="is-large"]
+    & + [data-am-bulma~="media"]
       margin-top: 20px
       padding-top: 20px
   // Responsiveness
   +tablet
-    &[data-layout~="is-large"]
-      [data-layout~="media-number"]
+    &[data-am-bulma~="is-large"]
+      [data-am-bulma~="media-number"]
         margin-right: 20px

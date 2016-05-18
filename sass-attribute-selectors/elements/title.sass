@@ -1,6 +1,6 @@
-[data-layout~="title"],
-[data-layout~="subtitle"]
-  @extend [data-layout~="block"]
+[data-am-bulma~="title"],
+[data-am-bulma~="subtitle"]
+  @extend [data-am-bulma~="block"]
   font-weight: $weight-title-normal
   word-break: break-word
   em,
@@ -11,10 +11,10 @@
       border-bottom: 1px solid
   strong
     font-weight: $weight-title-bold
-  [data-layout~="tag"]
+  [data-am-bulma~="tag"]
     vertical-align: bottom
 
-[data-layout~="title"]
+[data-am-bulma~="title"]
   color: $text-strong
   font-size: $size-large
   line-height: 1
@@ -23,31 +23,31 @@
     font-size: $size-large
   strong
     color: inherit
-  & + [data-layout~="highlight"]
+  & + [data-am-bulma~="highlight"]
     margin-top: -10px
-  & + [data-layout~="subtitle"]
+  & + [data-am-bulma~="subtitle"]
     margin-top: -10px
   // Colors
   @each $size in $sizes
     $i: index($sizes, $size)
-    &[data-layout~="is-#{$i}"]
+    &[data-am-bulma~="is-#{$i}"]
       font-size: $size
       code
         font-size: nth($sizes, min($i + 1, 6))
   // Modifiers
-  &[data-layout~="is-normal"]
+  &[data-am-bulma~="is-normal"]
     font-weight: 400
     strong
       font-weight: 700
   // Responsiveness
   +tablet
-    & + [data-layout~="subtitle"]
+    & + [data-am-bulma~="subtitle"]
       margin-top: -15px
 
-[data-layout~="subtitle"]
+[data-am-bulma~="subtitle"]
   color: $text
   font-size: $size-medium
-  line-height: 1[data-layout~="125"]
+  line-height: 1[data-am-bulma~="125"]
   code
     border-radius: $radius
     display: inline-block
@@ -56,17 +56,17 @@
     vertical-align: top
   strong
     color: $text-strong
-  & + [data-layout~="title"]
+  & + [data-am-bulma~="title"]
     margin-top: -20px
   // Colors
   @each $size in $sizes
     $i: index($sizes, $size)
-    &[data-layout~="is-#{$i}"]
+    &[data-am-bulma~="is-#{$i}"]
       font-size: $size
       code
         font-size: nth($sizes, min($i + 1, 6))
   // Modifiers
-  &[data-layout~="is-normal"]
+  &[data-am-bulma~="is-normal"]
     font-weight: 400
     strong
       font-weight: 700
