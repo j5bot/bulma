@@ -16,7 +16,7 @@ $header-height: 50px !default
     width: 100%
   // Modifiers
   &[data-am-bulma~="has-shadow"]
-    box-shadow: 0 2px 3px rgba($black, 0[data-am-bulma~="1)"]
+    box-shadow: 0 2px 3px rgba($black, 0.1)
   // Responsiveness
   +mobile
     [data-am-bulma~="container"]
@@ -43,7 +43,7 @@ $header-height: 50px !default
     flex-grow: 1
   img
     max-height: 24px
-  [data-am-bulma~="button + .button"]
+  [data-am-bulma~="button + "][data-am-bulma~="button"]
     margin-left: 10px
   [data-am-bulma~="fa"]
     font-size: 21px
@@ -125,10 +125,10 @@ a[data-am-bulma~="header-item"]
 [data-am-bulma~="header-menu"]
   // Responsiveness
   +mobile
-    box-shadow: 0 4px 7px rgba($black, 0[data-am-bulma~="1)"]
+    box-shadow: 0 4px 7px rgba($black, 0.1)
     display: none
     [data-am-bulma~="header-item"]
-      border-top: 1px solid rgba($border, 0[data-am-bulma~="5)"]
+      border-top: 1px solid rgba($border, 0.5)
       padding: 10px
     // Modifiers
     &[data-am-bulma~="is-active"]
@@ -136,13 +136,13 @@ a[data-am-bulma~="header-item"]
 
 // States
 
-[data-am-bulma~="header.is-centered"]
+[data-am-bulma~="header"][data-am-bulma~="is-centered"]
   justify-content: center
   [data-am-bulma~="header-left"],
   [data-am-bulma~="header-right"]
     justify-content: center
 
-[data-am-bulma~="header.is-small"]
+[data-am-bulma~="header"][data-am-bulma~="is-small"]
   background: $background
   box-shadow: none
   height: 40px

@@ -33,7 +33,7 @@
         color: $color-invert
       [data-am-bulma~="message-body"]
         border-color: $color
-        @if (colorLuminance($color) > 0[data-am-bulma~="8)"]
+        @if (colorLuminance($color) > 0.8)
           color: desaturate(lighten(darken($color, 100%), 40%), 40%)
         @else
           color: desaturate(lighten(darken($color, 100%), 50%), 30%)

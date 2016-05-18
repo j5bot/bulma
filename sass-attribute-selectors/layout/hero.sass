@@ -12,7 +12,7 @@
     transform: translate3d(-50%, -50%, 0)
   // Modifiers
   &[data-am-bulma~="is-transparent"]
-    opacity: 0[data-am-bulma~="3"]
+    opacity: 0.3
   // Responsiveness
   +mobile
     display: none
@@ -55,7 +55,7 @@
   justify-content: space-between
   [data-am-bulma~="nav"]
     background: none
-    box-shadow: 0 1px 0 rgba($border, 0[data-am-bulma~="3)"]
+    box-shadow: 0 1px 0 rgba($border, 0.3)
   [data-am-bulma~="tabs"]
     ul
       border-bottom: none
@@ -72,25 +72,25 @@
         strong
           color: inherit
       [data-am-bulma~="subtitle"]
-        color: rgba($color-invert, 0[data-am-bulma~="7)"]
+        color: rgba($color-invert, 0.7)
         a,
         strong
           color: $color-invert
       [data-am-bulma~="nav"]
-        box-shadow: 0 1px 0 rgba($color-invert, 0[data-am-bulma~="2)"]
+        box-shadow: 0 1px 0 rgba($color-invert, 0.2)
       [data-am-bulma~="nav-menu"]
         +mobile
           background: $color
       a[data-am-bulma~="nav-item"],
-      [data-am-bulma~="nav-item a"]:not([data-am-bulma~="button)"]
-        color: rgba($color-invert, 0[data-am-bulma~="5)"]
+      [data-am-bulma~="nav-item a"]:not([data-am-bulma~="button"])
+        color: rgba($color-invert, 0.5)
         &:hover,
         &[data-am-bulma~="is-active"]
           color: $color-invert
       [data-am-bulma~="tabs"]
         a
           color: $color-invert
-          opacity: 0[data-am-bulma~="5"]
+          opacity: 0.5
           &:hover
             opacity: 1
         li
@@ -101,7 +101,7 @@
           a
             color: $color-invert
             &:hover
-              background: rgba($black, 0[data-am-bulma~="1)"]
+              background: rgba($black, 0.1)
           li[data-am-bulma~="is-active a"]
             &,
             &:hover
@@ -119,13 +119,13 @@
           span
             background: $color-invert
           &:hover
-            background: rgba($black, 0[data-am-bulma~="1)"]
+            background: rgba($black, 0.1)
           &[data-am-bulma~="is-active"]
             span
               background: $color-invert
         [data-am-bulma~="nav-menu"]
           [data-am-bulma~="nav-item"]
-            border-top-color: rgba($color-invert, 0[data-am-bulma~="2)"]
+            border-top-color: rgba($color-invert, 0.2)
   // Sizes
   &[data-am-bulma~="is-medium"]
     +tablet

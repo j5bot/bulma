@@ -15,7 +15,7 @@
     flex-grow: 1
   img
     max-height: 24px
-  [data-am-bulma~="button + .button"]
+  [data-am-bulma~="button + "][data-am-bulma~="button"]
     margin-left: 10px
   [data-am-bulma~="tag"]
     &:first-child
@@ -53,14 +53,14 @@ a[data-am-bulma~="nav-item"]
   // Responsiveness
   +mobile
     background: $white
-    box-shadow: 0 4px 7px rgba($black, 0[data-am-bulma~="1)"]
+    box-shadow: 0 4px 7px rgba($black, 0.1)
     left: 0
     display: none
     right: 0
     top: 100%
     position: absolute
     [data-am-bulma~="nav-item"]
-      border-top: 1px solid rgba($border, 0[data-am-bulma~="5)"]
+      border-top: 1px solid rgba($border, 0.5)
       padding: 10px
     &[data-am-bulma~="is-active"]
       display: block
@@ -103,18 +103,18 @@ a[data-am-bulma~="nav-item"]
     min-height: $nav-height
     width: 100%
     & > [data-am-bulma~="nav-left"]
-      & > [data-am-bulma~="nav-item"]:first-child:not([data-am-bulma~="is-tab)"]
+      & > [data-am-bulma~="nav-item"]:first-child:not([data-am-bulma~="is-tab"])
         padding-left: 0
     & > [data-am-bulma~="nav-right"]
-      & > [data-am-bulma~="nav-item"]:last-child:not([data-am-bulma~="is-tab)"]
+      & > [data-am-bulma~="nav-item"]:last-child:not([data-am-bulma~="is-tab"])
         padding-right: 0
   [data-am-bulma~="container > &"]
     & > [data-am-bulma~="nav-left"]
-      & > [data-am-bulma~="nav-item"]:first-child:not([data-am-bulma~="is-tab)"]
+      & > [data-am-bulma~="nav-item"]:first-child:not([data-am-bulma~="is-tab"])
         padding-left: 0
     & > [data-am-bulma~="nav-right"]
-      & > [data-am-bulma~="nav-item"]:last-child:not([data-am-bulma~="is-tab)"]
+      & > [data-am-bulma~="nav-item"]:last-child:not([data-am-bulma~="is-tab"])
         padding-right: 0
   // Modifiers
   &[data-am-bulma~="has-shadow"]
-    box-shadow: 0 2px 3px rgba($black, 0[data-am-bulma~="1)"]
+    box-shadow: 0 2px 3px rgba($black, 0.1)

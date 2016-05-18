@@ -1,41 +1,41 @@
 [data-am-bulma~="column"]
   flex: 1
   padding: 10px
-  [data-am-bulma~="columns.is-mobile > &.is-narrow"]
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-narrow"]
     flex: none
-  [data-am-bulma~="columns.is-mobile > &.is-full"]
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-full"]
     flex: none
     width: 100%
-  [data-am-bulma~="columns.is-mobile > &.is-three-quarters"]
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-three-quarters"]
     flex: none
     width: 75%
-  [data-am-bulma~="columns.is-mobile > &.is-two-thirds"]
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-two-thirds"]
     flex: none
-    width: 66[data-am-bulma~="6666%"]
-  [data-am-bulma~="columns.is-mobile > &.is-half"]
+    width: 66.6666%
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-half"]
     flex: none
     width: 50%
-  [data-am-bulma~="columns.is-mobile > &.is-one-third"]
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-one-third"]
     flex: none
-    width: 33[data-am-bulma~="3333%"]
-  [data-am-bulma~="columns.is-mobile > &.is-one-quarter"]
+    width: 33.3333%
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-one-quarter"]
     flex: none
     width: 25%
-  [data-am-bulma~="columns.is-mobile > &.is-offset-three-quarters"]
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-three-quarters"]
     margin-left: 75%
-  [data-am-bulma~="columns.is-mobile > &.is-offset-two-thirds"]
-    margin-left: 66[data-am-bulma~="6666%"]
-  [data-am-bulma~="columns.is-mobile > &.is-offset-half"]
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-two-thirds"]
+    margin-left: 66.6666%
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-half"]
     margin-left: 50%
-  [data-am-bulma~="columns.is-mobile > &.is-offset-one-third"]
-    margin-left: 33[data-am-bulma~="3333%"]
-  [data-am-bulma~="columns.is-mobile > &.is-offset-one-quarter"]
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-one-third"]
+    margin-left: 33.3333%
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-one-quarter"]
     margin-left: 25%
   @for $i from 1 through 12
-    [data-am-bulma~="columns.is-mobile > &.is-#{$i}"]
+    [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-#{$i}"]
       flex: none
       width: ($i / 12) * 100%
-    [data-am-bulma~="columns.is-mobile > &.is-offset-#{$i}"]
+    [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-#{$i}"]
       margin-left: ($i / 12) * 100%
   +mobile
     &[data-am-bulma~="is-narrow-mobile"]
@@ -48,24 +48,24 @@
       width: 75%
     &[data-am-bulma~="is-two-thirds-mobile"]
       flex: none
-      width: 66[data-am-bulma~="6666%"]
+      width: 66.6666%
     &[data-am-bulma~="is-half-mobile"]
       flex: none
       width: 50%
     &[data-am-bulma~="is-one-third-mobile"]
       flex: none
-      width: 33[data-am-bulma~="3333%"]
+      width: 33.3333%
     &[data-am-bulma~="is-one-quarter-mobile"]
       flex: none
       width: 25%
     &[data-am-bulma~="is-offset-three-quarters-mobile"]
       margin-left: 75%
     &[data-am-bulma~="is-offset-two-thirds-mobile"]
-      margin-left: 66[data-am-bulma~="6666%"]
+      margin-left: 66.6666%
     &[data-am-bulma~="is-offset-half-mobile"]
       margin-left: 50%
     &[data-am-bulma~="is-offset-one-third-mobile"]
-      margin-left: 33[data-am-bulma~="3333%"]
+      margin-left: 33.3333%
     &[data-am-bulma~="is-offset-one-quarter-mobile"]
       margin-left: 25%
     @for $i from 1 through 12
@@ -89,7 +89,7 @@
     &[data-am-bulma~="is-two-thirds"],
     &[data-am-bulma~="is-two-thirds-tablet"]
       flex: none
-      width: 66[data-am-bulma~="6666%"]
+      width: 66.6666%
     &[data-am-bulma~="is-half"],
     &[data-am-bulma~="is-half-tablet"]
       flex: none
@@ -97,7 +97,7 @@
     &[data-am-bulma~="is-one-third"],
     &[data-am-bulma~="is-one-third-tablet"]
       flex: none
-      width: 33[data-am-bulma~="3333%"]
+      width: 33.3333%
     &[data-am-bulma~="is-one-quarter"],
     &[data-am-bulma~="is-one-quarter-tablet"]
       flex: none
@@ -107,13 +107,13 @@
       margin-left: 75%
     &[data-am-bulma~="is-offset-two-thirds"],
     &[data-am-bulma~="is-offset-two-thirds-tablet"]
-      margin-left: 66[data-am-bulma~="6666%"]
+      margin-left: 66.6666%
     &[data-am-bulma~="is-offset-half"],
     &[data-am-bulma~="is-offset-half-tablet"]
       margin-left: 50%
     &[data-am-bulma~="is-offset-one-third"],
     &[data-am-bulma~="is-offset-one-third-tablet"]
-      margin-left: 33[data-am-bulma~="3333%"]
+      margin-left: 33.3333%
     &[data-am-bulma~="is-offset-one-quarter"],
     &[data-am-bulma~="is-offset-one-quarter-tablet"]
       margin-left: 25%
@@ -136,24 +136,24 @@
       width: 75%
     &[data-am-bulma~="is-two-thirds-desktop"]
       flex: none
-      width: 66[data-am-bulma~="6666%"]
+      width: 66.6666%
     &[data-am-bulma~="is-half-desktop"]
       flex: none
       width: 50%
     &[data-am-bulma~="is-one-third-desktop"]
       flex: none
-      width: 33[data-am-bulma~="3333%"]
+      width: 33.3333%
     &[data-am-bulma~="is-one-quarter-desktop"]
       flex: none
       width: 25%
     &[data-am-bulma~="is-offset-three-quarters-desktop"]
       margin-left: 75%
     &[data-am-bulma~="is-offset-two-thirds-desktop"]
-      margin-left: 66[data-am-bulma~="6666%"]
+      margin-left: 66.6666%
     &[data-am-bulma~="is-offset-half-desktop"]
       margin-left: 50%
     &[data-am-bulma~="is-offset-one-third-desktop"]
-      margin-left: 33[data-am-bulma~="3333%"]
+      margin-left: 33.3333%
     &[data-am-bulma~="is-offset-one-quarter-desktop"]
       margin-left: 25%
     @for $i from 1 through 12
@@ -190,10 +190,10 @@
     +tablet
       flex-wrap: wrap
       & > [data-am-bulma~="column"]
-        flex-basis: 33[data-am-bulma~="3333%"]
-        max-width: 33[data-am-bulma~="3333%"]
+        flex-basis: 33.3333%
+        max-width: 33.3333%
         padding: 10px
-        width: 33[data-am-bulma~="3333%"]
+        width: 33.3333%
         & + [data-am-bulma~="column"]
           margin-left: 0
   &[data-am-bulma~="is-mobile"]
@@ -204,7 +204,7 @@
     align-items: center
   // Responsiveness
   +tablet
-    &:not([data-am-bulma~="is-desktop)"]
+    &:not([data-am-bulma~="is-desktop"])
       display: flex
   +desktop
     // Modifiers
@@ -229,11 +229,11 @@
     padding: 10px
   &[data-am-bulma~="is-vertical"]
     flex-direction: column
-    & > [data-am-bulma~="tile.is-child"]:not(:last-child)
+    & > [data-am-bulma~="tile"][data-am-bulma~="is-child"]:not(:last-child)
       margin-bottom: 20px !important
   // Responsiveness
   +tablet
-    &:not([data-am-bulma~="is-child)"]
+    &:not([data-am-bulma~="is-child"])
       display: flex
     @for $i from 1 through 12
       &[data-am-bulma~="is-#{$i}"]
