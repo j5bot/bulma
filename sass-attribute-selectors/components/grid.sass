@@ -162,6 +162,43 @@
         width: ($i / 12) * 100%
       &[data-am-bulma~="is-offset-#{$i}-desktop"]
         margin-left: ($i / 12) * 100%
+  +widescreen
+    &[data-am-bulma~="is-narrow-widescreen"]
+      flex: none
+    &[data-am-bulma~="is-full-widescreen"]
+      flex: none
+      width: 100%
+    &[data-am-bulma~="is-three-quarters-widescreen"]
+      flex: none
+      width: 75%
+    &[data-am-bulma~="is-two-thirds-widescreen"]
+      flex: none
+      width: 66.6666%
+    &[data-am-bulma~="is-half-widescreen"]
+      flex: none
+      width: 50%
+    &[data-am-bulma~="is-one-third-widescreen"]
+      flex: none
+      width: 33.3333%
+    &[data-am-bulma~="is-one-quarter-widescreen"]
+      flex: none
+      width: 25%
+    &[data-am-bulma~="is-offset-three-quarters-widescreen"]
+      margin-left: 75%
+    &[data-am-bulma~="is-offset-two-thirds-widescreen"]
+      margin-left: 66.6666%
+    &[data-am-bulma~="is-offset-half-widescreen"]
+      margin-left: 50%
+    &[data-am-bulma~="is-offset-one-third-widescreen"]
+      margin-left: 33.3333%
+    &[data-am-bulma~="is-offset-one-quarter-widescreen"]
+      margin-left: 25%
+    @for $i from 1 through 12
+      &[data-am-bulma~="is-#{$i}-widescreen"]
+        flex: none
+        width: ($i / 12) * 100%
+      &[data-am-bulma~="is-offset-#{$i}-widescreen"]
+        margin-left: ($i / 12) * 100%
 
 [data-am-bulma~="columns"]
   margin-left: -10px
