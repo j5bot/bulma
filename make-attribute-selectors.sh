@@ -13,4 +13,3 @@ popd
 cp bulma.sass bulma-attribute-selectors.sass
 
 sed -i '' 's#sass/#sass-attribute-selectors/#g' bulma-attribute-selectors.sass
-
