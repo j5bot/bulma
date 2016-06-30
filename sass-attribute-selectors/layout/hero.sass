@@ -49,7 +49,7 @@
 
 [data-am-bulma~="hero"]
   align-items: stretch
-  background: $white
+  background-color: $white
   display: flex
   flex-direction: column
   justify-content: space-between
@@ -64,7 +64,7 @@
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
     &[data-am-bulma~="is-#{$name}"]
-      background: $color
+      background-color: $color
       color: $color-invert
       [data-am-bulma~="title"]
         color: $color-invert
@@ -80,7 +80,7 @@
         box-shadow: 0 1px 0 rgba($color-invert, 0.2)
       [data-am-bulma~="nav-menu"]
         +mobile
-          background: $color
+          background-color: $color
       a[data-am-bulma~="nav-item"],
       [data-am-bulma~="nav-item a"]:not([data-am-bulma~="button"])
         color: rgba($color-invert, 0.5)
@@ -101,11 +101,11 @@
           a
             color: $color-invert
             &:hover
-              background: rgba($black, 0.1)
+              background-color: rgba($black, 0.1)
           li[data-am-bulma~="is-active a"]
             &,
             &:hover
-              background: $color-invert
+              background-color: $color-invert
               border-color: $color-invert
               color: $color
       // Modifiers
@@ -117,12 +117,12 @@
       +mobile
         [data-am-bulma~="nav-toggle"]
           span
-            background: $color-invert
+            background-color: $color-invert
           &:hover
-            background: rgba($black, 0.1)
+            background-color: rgba($black, 0.1)
           &[data-am-bulma~="is-active"]
             span
-              background: $color-invert
+              background-color: $color-invert
         [data-am-bulma~="nav-menu"]
           [data-am-bulma~="nav-item"]
             border-top-color: rgba($color-invert, 0.2)

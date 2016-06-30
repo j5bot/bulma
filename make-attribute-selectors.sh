@@ -13,3 +13,7 @@ popd
 cp bulma.sass bulma-attribute-selectors.sass
 
 sed -i '' 's#sass/#sass-attribute-selectors/#g' bulma-attribute-selectors.sass
+
+echo '/* @import "bulma.sass" */' >> bulma-attribute-selectors.sass
+
+echo 'Recreated bulma-attribute-selectors.sass at: ' $(date) >> bulma-attribute-selectors.log

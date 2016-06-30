@@ -1,5 +1,5 @@
 [data-am-bulma~="column"]
-  flex: 1
+  flex: 1 1 auto
   padding: 10px
   [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-narrow"]
     flex: none
@@ -250,7 +250,8 @@
 
 [data-am-bulma~="tile"]
   align-items: stretch
-  flex: 1
+  flex: 1 1 auto
+  min-height: min-content
   // Modifiers
   &[data-am-bulma~="is-ancestor"]
     margin-left: -10px
