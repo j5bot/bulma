@@ -1,11 +1,15 @@
+@import "../utilities/controls.sass"
+@import "../utilities/mixins.sass"
+
 =form-control
   +control
   @each $name, $pair in $colors
     $color: nth($pair, 1)
-    &[data-am-bulma~="is-#{$name}"]
+    &.is-#{$name}
       border-color: $color
 
-[data-am-bulma~="input"]
+.input,
+.textarea
   +form-control
   box-shadow: inset 0 1px 2px rgba($black, 0.1)
   max-width: 100%
@@ -13,22 +17,21 @@
   &[type="search"]
     border-radius: 290486px
   // Sizes
-  &[data-am-bulma~="is-small"]
+  &.is-small
     +control-small
-  &[data-am-bulma~="is-medium"]
+  &.is-medium
     +control-medium
-  &[data-am-bulma~="is-large"]
+  &.is-large
     +control-large
   // Modifiers
-  &[data-am-bulma~="is-fullwidth"]
+  &.is-fullwidth
     display: block
     width: 100%
-  &[data-am-bulma~="is-inline"]
+  &.is-inline
     display: inline
     width: auto
 
-[data-am-bulma~="textarea"]
-  @extend [data-am-bulma~="input"]
+.textarea
   display: block
   line-height: 1.2
   max-height: 600px
@@ -38,7 +41,8 @@
   padding: 10px
   resize: vertical
 
-%control-with-element
+.checkbox,
+.radio
   cursor: pointer
   display: inline-block
   line-height: 16px
@@ -48,21 +52,17 @@
     cursor: pointer
   &:hover
     color: $control-hover
-  &[data-am-bulma~="is-disabled"]
-    color: $text-light
+  &.is-disabled
+    color: $control-disabled
     pointer-events: none
     input
       pointer-events: none
 
-[data-am-bulma~="checkbox"]
-  @extend %control-with-element
-
-[data-am-bulma~="radio"]
-  @extend %control-with-element
-  & + [data-am-bulma~="radio"]
+.radio
+  & + .radio
     margin-left: 10px
 
-[data-am-bulma~="select"]
+.select
   display: inline-block
   height: 32px
   position: relative
@@ -77,73 +77,75 @@
       border-color: $control-hover-border
     &::ms-expand
       display: none
-  &[data-am-bulma~="is-fullwidth"]
+  &.is-fullwidth
     width: 100%
     select
       width: 100%
   &:after
-    +arrow($link)
+    +arrow($control-active)
     margin-top: -6px
     right: 16px
     top: 50%
   &:hover
     &:after
-      border-color: $link-hover
-  &[data-am-bulma~="is-small"]
+      border-color: $control-hover
+  &.is-small
     height: 24px
     select
       +control-small
       padding-right: 28px
-  &[data-am-bulma~="is-medium"]
+  &.is-medium
     height: 40px
     select
       +control-medium
       padding-right: 44px
-  &[data-am-bulma~="is-large"]
+  &.is-large
     height: 48px
     select
       +control-large
       padding-right: 52px
 
-[data-am-bulma~="label"]
-  color: $text-strong
+.label
+  color: $control
   display: block
   font-weight: bold
   &:not(:last-child)
     margin-bottom: 5px
 
-[data-am-bulma~="help"]
+.help
   display: block
-  font-size: $size-small
+  font-size: $control-size-small
   margin-top: 5px
   @each $name, $pair in $colors
     $color: nth($pair, 1)
-    &[data-am-bulma~="is-#{$name}"]
+    &.is-#{$name}
       color: $color
 
 // Containers
 
-[data-am-bulma~="control-label"]
+.control-label
   +mobile
     margin-bottom: 5px
   +tablet
-    flex: 1
+    flex-basis: 0
+    flex-grow: 1
+    flex-shrink: 0
     margin-right: 20px
     padding-top: 7px
     text-align: right
 
-[data-am-bulma~="control"]
+.control
   position: relative
   text-align: left
   &:not(:last-child)
     margin-bottom: 10px
   // Modifiers
-  &[data-am-bulma~="has-addons"]
+  &.has-addons
     display: flex
     justify-content: flex-start
-    [data-am-bulma~="button"],
-    [data-am-bulma~="input"],
-    [data-am-bulma~="select"]
+    .button,
+    .input,
+    .select
       border-radius: 0
       margin-right: -1px
       width: auto
@@ -153,100 +155,105 @@
       &:focus
         z-index: 3
       &:first-child
-        border-radius: $radius 0 0 $radius
+        border-radius: $control-radius 0 0 $control-radius
         select
-          border-radius: $radius 0 0 $radius
+          border-radius: $control-radius 0 0 $control-radius
       &:last-child
-        border-radius: 0 $radius $radius 0
+        border-radius: 0 $control-radius $control-radius 0
         select
-          border-radius: 0 $radius $radius 0
-      &[data-am-bulma~="is-expanded"]
-        flex: 1
-    &[data-am-bulma~="has-addons-centered"]
+          border-radius: 0 $control-radius $control-radius 0
+      &.is-expanded
+        flex-grow: 1
+        flex-shrink: 0
+    &.has-addons-centered
       justify-content: center
-    &[data-am-bulma~="has-addons-right"]
+    &.has-addons-right
       justify-content: flex-end
-    &[data-am-bulma~="has-addons-fullwidth"]
-      [data-am-bulma~="button"],
-      [data-am-bulma~="input"],
-      [data-am-bulma~="select"]
-        flex: 1
-  &[data-am-bulma~="has-icon"]
-    & > [data-am-bulma~="fa"]
+    &.has-addons-fullwidth
+      .button,
+      .input,
+      .select
+        flex-grow: 1
+        flex-shrink: 0
+  &.has-icon
+    & > .fa
       +fa(14px, 24px)
-      color: $text-light
+      color: $control-icon
       pointer-events: none
       position: absolute
       top: 4px
       z-index: 4
-    [data-am-bulma~="input"]
-      &:focus + [data-am-bulma~="fa"]
-        color: $text-strong
-      &[data-am-bulma~="is-small + "][data-am-bulma~="fa"]
+    .input
+      &:focus + .fa
+        color: $control-icon-active
+      &.is-small + .fa
         font-size: 10.5px
         top: 0
-      &[data-am-bulma~="is-medium + "][data-am-bulma~="fa"]
+      &.is-medium + .fa
         font-size: 21px
         top: 8px
-      &[data-am-bulma~="is-large + "][data-am-bulma~="fa"]
+      &.is-large + .fa
         font-size: 21px
         top: 12px
-    &:not([data-am-bulma~="has-icon-right"])
-      & > [data-am-bulma~="fa"]
+    &:not(.has-icon-right)
+      & > .fa
         left: 4px
-      [data-am-bulma~="input"]
+      .input
         padding-left: 32px
-        &[data-am-bulma~="is-small"]
+        &.is-small
           padding-left: 24px
-          & + [data-am-bulma~="fa"]
+          & + .fa
             left: 0
-        &[data-am-bulma~="is-medium"]
+        &.is-medium
           padding-left: 40px
-          & + [data-am-bulma~="fa"]
+          & + .fa
             left: 8px
-        &[data-am-bulma~="is-large"]
+        &.is-large
           padding-left: 48px
-          & + [data-am-bulma~="fa"]
+          & + .fa
             left: 12px
-    &[data-am-bulma~="has-icon-right"]
-      & > [data-am-bulma~="fa"]
+    &.has-icon-right
+      & > .fa
         right: 4px
-      [data-am-bulma~="input"]
+      .input
         padding-right: 32px
-        &[data-am-bulma~="is-small"]
+        &.is-small
           padding-right: 24px
-          & + [data-am-bulma~="fa"]
+          & + .fa
             right: 0
-        &[data-am-bulma~="is-medium"]
+        &.is-medium
           padding-right: 40px
-          & + [data-am-bulma~="fa"]
+          & + .fa
             right: 8px
-        &[data-am-bulma~="is-large"]
+        &.is-large
           padding-right: 48px
-          & + [data-am-bulma~="fa"]
+          & + .fa
             right: 12px
-  &[data-am-bulma~="is-grouped"]
+  &.is-grouped
     display: flex
     justify-content: flex-start
-    & > [data-am-bulma~="control"]
+    & > .control
       &:not(:last-child)
         margin-bottom: 0
         margin-right: 10px
-      &[data-am-bulma~="is-expanded"]
-        flex: 1
-    &[data-am-bulma~="is-grouped-centered"]
+      &.is-expanded
+        flex-grow: 1
+        flex-shrink: 0
+    &.is-grouped-centered
       justify-content: center
-    &[data-am-bulma~="is-grouped-right"]
+    &.is-grouped-right
       justify-content: flex-end
-  &[data-am-bulma~="is-horizontal"]
+  &.is-horizontal
     +tablet
       display: flex
-      & > [data-am-bulma~="control"]
+      & > .control
         display: flex
-        flex: 5
-  &[data-am-bulma~="is-loading"]
+        flex-basis: 0
+        flex-grow: 5
+        flex-shrink: 1
+  &.is-loading
     &:after
-      @extend [data-am-bulma~="loader"]
+      +loader
       position: absolute !important
       right: 8px
       top: 8px

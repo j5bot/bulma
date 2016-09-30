@@ -1,9 +1,11 @@
-[data-am-bulma~="menu-nav"]
+@import "../utilities/variables.sass"
+
+.menu-nav
   a
     display: block
     padding: 5px 10px
 
-[data-am-bulma~="menu-list"]
+.menu-list
   a
     border-radius: $radius-small
     color: $text
@@ -13,7 +15,7 @@
       background-color: $background
       color: $link
     // Modifiers
-    &[data-am-bulma~="is-active"]
+    &.is-active
       background-color: $link
       color: $link-invert
   li
@@ -22,7 +24,7 @@
       margin: 10px
       padding-left: 10px
 
-[data-am-bulma~="menu-label"]
+.menu-label
   color: $text-light
   font-size: $size-small
   letter-spacing: 1px

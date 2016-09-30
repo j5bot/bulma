@@ -1,23 +1,31 @@
+@import "../utilities/mixins.sass"
+@import "../utilities/variables.sass"
+
+$nav-height: 50px !default
+
 // Components
 
-[data-am-bulma~="nav-toggle"]
-  @extend [data-am-bulma~="hamburger"]
+.nav-toggle
+  +hamburger($nav-height)
   // Responsiveness
   +tablet
     display: none
 
-[data-am-bulma~="nav-item"]
+.nav-item
   align-items: center
   display: flex
+  flex-grow: 0
+  flex-shrink: 0
   justify-content: center
   padding: 10px
   a
     flex-grow: 1
+    flex-shrink: 0
   img
     max-height: 24px
-  [data-am-bulma~="button + "][data-am-bulma~="button"]
+  .button + .button
     margin-left: 10px
-  [data-am-bulma~="tag"]
+  .tag
     &:first-child
       margin-right: 5px
     &:last-child
@@ -26,15 +34,15 @@
   +mobile
     justify-content: flex-start
 
-[data-am-bulma~="nav-item a"],
-a[data-am-bulma~="nav-item"]
-  color: $text
+.nav-item a,
+a.nav-item
+  color: $text-light
   &:hover
     color: $link-hover
   // Modifiers
-  &[data-am-bulma~="is-active"]
+  &.is-active
     color: $link-active
-  &[data-am-bulma~="is-tab"]
+  &.is-tab
     border-bottom: 1px solid transparent
     border-top: 1px solid transparent
     padding-left: 12px
@@ -42,14 +50,14 @@ a[data-am-bulma~="nav-item"]
     &:hover
       border-bottom: 1px solid $link
       border-top: 1px solid transparent
-    &[data-am-bulma~="is-active"]
+    &.is-active
       border-bottom: 3px solid $link
       border-top: 3px solid transparent
       color: $link
 
 // Containers
 
-[data-am-bulma~="nav-menu"]
+.nav-menu
   // Responsiveness
   +mobile
     background-color: $white
@@ -59,37 +67,45 @@ a[data-am-bulma~="nav-item"]
     right: 0
     top: 100%
     position: absolute
-    [data-am-bulma~="nav-item"]
+    .nav-item
       border-top: 1px solid rgba($border, 0.5)
       padding: 10px
-    &[data-am-bulma~="is-active"]
+    &.is-active
       display: block
+  +tablet-only
+    padding-right: 20px
 
-[data-am-bulma~="nav-left"]
+.nav-left
   align-items: stretch
   display: flex
-  flex: 1
+  flex-basis: 0
+  flex-grow: 1
+  flex-shrink: 0
   justify-content: flex-start
   overflow: hidden
   overflow-x: auto
   white-space: nowrap
 
-[data-am-bulma~="nav-center"]
+.nav-center
   align-items: stretch
   display: flex
   justify-content: center
+  margin-left: auto
+  margin-right: auto
 
-[data-am-bulma~="nav-right"]
+.nav-right
   // Responsiveness
   +tablet
     align-items: stretch
     display: flex
-    flex: 1
+    flex-basis: 0
+    flex-grow: 1
+    flex-shrink: 0
     justify-content: flex-end
 
 // Main container
 
-[data-am-bulma~="nav"]
+.nav
   align-items: stretch
   background-color: $white
   display: flex
@@ -97,24 +113,31 @@ a[data-am-bulma~="nav-item"]
   position: relative
   text-align: center
   z-index: 2
-  & > [data-am-bulma~="container"]
+  & > .container
     align-items: stretch
     display: flex
     min-height: $nav-height
     width: 100%
-    & > [data-am-bulma~="nav-left"]
-      & > [data-am-bulma~="nav-item"]:first-child:not([data-am-bulma~="is-tab"])
+    & > .nav-left
+      & > .nav-item:first-child:not(.is-tab)
         padding-left: 0
-    & > [data-am-bulma~="nav-right"]
-      & > [data-am-bulma~="nav-item"]:last-child:not([data-am-bulma~="is-tab"])
+    & > .nav-right
+      & > .nav-item:last-child:not(.is-tab)
         padding-right: 0
-  [data-am-bulma~="container > &"]
-    & > [data-am-bulma~="nav-left"]
-      & > [data-am-bulma~="nav-item"]:first-child:not([data-am-bulma~="is-tab"])
+  .container > &
+    & > .nav-left
+      & > .nav-item:first-child:not(.is-tab)
         padding-left: 0
-    & > [data-am-bulma~="nav-right"]
-      & > [data-am-bulma~="nav-item"]:last-child:not([data-am-bulma~="is-tab"])
+    & > .nav-right
+      & > .nav-item:last-child:not(.is-tab)
         padding-right: 0
   // Modifiers
-  &[data-am-bulma~="has-shadow"]
+  &.has-shadow
     box-shadow: 0 2px 3px rgba($black, 0.1)
+  // Responsiveness
+  +touch
+    & > .container,
+    .container > &
+      & > .nav-left
+        & > .nav-item.is-brand:first-child
+          padding-left: 20px

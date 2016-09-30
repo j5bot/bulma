@@ -1,6 +1,9 @@
+@import "../utilities/mixins.sass"
+@import "../utilities/variables.sass"
+
 // Components
 
-[data-am-bulma~="hero-video"]
+.hero-video
   +overlay
   overflow: hidden
   video
@@ -11,136 +14,138 @@
     top: 50%
     transform: translate3d(-50%, -50%, 0)
   // Modifiers
-  &[data-am-bulma~="is-transparent"]
+  &.is-transparent
     opacity: 0.3
   // Responsiveness
   +mobile
     display: none
 
-[data-am-bulma~="hero-buttons"]
+.hero-buttons
   margin-top: 20px
   // Responsiveness
   +mobile
-    [data-am-bulma~="button"]
+    .button
       display: flex
       &:not(:last-child)
         margin-bottom: 10px
   +tablet
     display: flex
     justify-content: center
-    [data-am-bulma~="button"]:not(:last-child)
+    .button:not(:last-child)
       margin-right: 20px
 
 // Containers
 
-[data-am-bulma~="hero-head"],
-[data-am-bulma~="hero-foot"]
+.hero-head,
+.hero-foot
   flex-shrink: 0
 
-[data-am-bulma~="hero-body"]
-  flex: 1
+.hero-body
+  flex-grow: 1
+  flex-shrink: 0
   padding: 40px 20px
   // Responsiveness
-  +desktop
+  +from(1240px)
     padding-left: 0
     padding-right: 0
 
 // Main container
 
-[data-am-bulma~="hero"]
+.hero
   align-items: stretch
   background-color: $white
   display: flex
   flex-direction: column
   justify-content: space-between
-  [data-am-bulma~="nav"]
+  .nav
     background: none
     box-shadow: 0 1px 0 rgba($border, 0.3)
-  [data-am-bulma~="tabs"]
+  .tabs
     ul
       border-bottom: none
   // Colors
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
-    &[data-am-bulma~="is-#{$name}"]
+    &.is-#{$name}
       background-color: $color
       color: $color-invert
-      [data-am-bulma~="title"]
+      .title
         color: $color-invert
         a,
         strong
           color: inherit
-      [data-am-bulma~="subtitle"]
-        color: rgba($color-invert, 0.7)
+      .subtitle
+        color: rgba($color-invert, 0.9)
         a,
         strong
           color: $color-invert
-      [data-am-bulma~="nav"]
+      .nav
         box-shadow: 0 1px 0 rgba($color-invert, 0.2)
-      [data-am-bulma~="nav-menu"]
+      .nav-menu
         +mobile
           background-color: $color
-      a[data-am-bulma~="nav-item"],
-      [data-am-bulma~="nav-item a"]:not([data-am-bulma~="button"])
-        color: rgba($color-invert, 0.5)
+      a.nav-item,
+      .nav-item a:not(.button)
+        color: rgba($color-invert, 0.7)
         &:hover,
-        &[data-am-bulma~="is-active"]
+        &.is-active
           color: $color-invert
-      [data-am-bulma~="tabs"]
+      .tabs
         a
           color: $color-invert
-          opacity: 0.5
+          opacity: 0.9
           &:hover
             opacity: 1
         li
-          &[data-am-bulma~="is-active a"]
+          &.is-active a
             opacity: 1
-        &[data-am-bulma~="is-boxed"],
-        &[data-am-bulma~="is-toggle"]
+        &.is-boxed,
+        &.is-toggle
           a
             color: $color-invert
             &:hover
               background-color: rgba($black, 0.1)
-          li[data-am-bulma~="is-active a"]
+          li.is-active a
             &,
             &:hover
               background-color: $color-invert
               border-color: $color-invert
               color: $color
       // Modifiers
-      &[data-am-bulma~="is-bold"]
+      &.is-bold
         $gradient-top-left: darken(saturate(adjust-hue($color, -10deg), 10%), 10%)
         $gradient-bottom-right: lighten(saturate(adjust-hue($color, 10deg), 5%), 5%)
         background-image: linear-gradient(141deg, $gradient-top-left 0%, $color 71%, $gradient-bottom-right 100%)
       // Responsiveness
       +mobile
-        [data-am-bulma~="nav-toggle"]
+        .nav-toggle
           span
             background-color: $color-invert
           &:hover
             background-color: rgba($black, 0.1)
-          &[data-am-bulma~="is-active"]
+          &.is-active
             span
               background-color: $color-invert
-        [data-am-bulma~="nav-menu"]
-          [data-am-bulma~="nav-item"]
+        .nav-menu
+          .nav-item
             border-top-color: rgba($color-invert, 0.2)
   // Sizes
-  &[data-am-bulma~="is-medium"]
+  &.is-medium
     +tablet
-      [data-am-bulma~="hero-body"]
+      .hero-body
         padding-bottom: 120px
         padding-top: 120px
-  &[data-am-bulma~="is-large"]
+  &.is-large
     +tablet
-      [data-am-bulma~="hero-body"]
+      .hero-body
         padding-bottom: 240px
         padding-top: 240px
-  &[data-am-bulma~="is-fullheight"]
+  &.is-fullheight
     min-height: 100vh
-    [data-am-bulma~="hero-body"]
+    .hero-body
       align-items: center
       display: flex
-      & > [data-am-bulma~="container"]
-        flex: 1
+      & > .container
+        flex-grow: 1
+        flex-shrink: 1

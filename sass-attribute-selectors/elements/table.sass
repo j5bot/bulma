@@ -1,27 +1,39 @@
-[data-am-bulma~="table"]
-  background-color: $white
-  color: $text-strong
+@import "../utilities/mixins.sass"
+@import "../utilities/variables.sass"
+
+$table: $text-strong !default
+$table-background: $white !default
+$table-border: $border !default
+
+$table-head: $text-light !default
+
+$table-row-hover-background: $white-ter !default
+$table-row-even-background: $white-bis !default
+
+.table
+  background-color: $table-background
+  color: $table
   margin-bottom: 20px
   width: 100%
   td,
   th
-    border: 1px solid $border
+    border: 1px solid $table-border
     border-width: 0 0 1px
     padding: 8px 10px
     vertical-align: top
     // Modifiers
-    &[data-am-bulma~="is-icon"]
+    &.is-icon
       padding: 5px
       text-align: center
       white-space: nowrap
       width: 1%
-      [data-am-bulma~="fa"]
+      .fa
         +fa(21px, 24px)
-      &[data-am-bulma~="is-link"]
+      &.is-link
         padding: 0
         & > a
           padding: 5px
-    &[data-am-bulma~="is-link"]
+    &.is-link
       padding: 0
       & > a
         display: block
@@ -29,7 +41,7 @@
         &:hover
           background-color: $link
           color: $link-invert
-    &[data-am-bulma~="is-narrow"]
+    &.is-narrow
       white-space: nowrap
       width: 1%
   th
@@ -37,13 +49,12 @@
     text-align: left
   tr
     &:hover
-      background-color: $background
-      color: $text-strong
+      background-color: $table-row-hover-background
   thead
     td,
     th
       border-width: 0 0 2px
-      color: $text-light
+      color: $table-head
   tbody
     tr
       &:last-child
@@ -54,9 +65,9 @@
     td,
     th
       border-width: 2px 0 0
-      color: $text-light
+      color: $table-head
   // Modifiers
-  &[data-am-bulma~="is-bordered"]
+  &.is-bordered
     td,
     th
       border-width: 1px
@@ -65,27 +76,25 @@
         td,
         th
           border-bottom-width: 1px
-  &[data-am-bulma~="is-narrow"]
+  &.is-narrow
     td,
     th
       padding: 5px 10px
       // Modifiers
-      &[data-am-bulma~="is-icon"]
+      &.is-icon
         padding: 2px
-        &[data-am-bulma~="is-link"]
+        &.is-link
           padding: 0
           & > a
             padding: 2px
-      &[data-am-bulma~="is-link"]
+      &.is-link
         padding: 0
         & > a
           padding: 5px 10px
-  &[data-am-bulma~="is-striped"]
+  &.is-striped
     tbody
       tr
-        &:hover
-          background-color: darken($background, 2%)
-        &:nth-child(2n)
-          background-color: $background
+        &:nth-child(even)
+          background-color: $table-row-even-background
           &:hover
-            background-color: darken($background, 2%)
+            background-color: $table-row-hover-background

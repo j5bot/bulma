@@ -1,23 +1,26 @@
-[data-am-bulma~="message-body"]
+@import "../utilities/functions.sass"
+@import "../utilities/variables.sass"
+
+.message-body
   border: 1px solid $border
   border-radius: $radius
   padding: 12px 15px
   strong
     color: inherit
 
-[data-am-bulma~="message-header"]
+.message-header
   background-color: $text
   border-radius: $radius $radius 0 0
   color: $text-invert
   padding: 7px 10px
   strong
     color: inherit
-  & + [data-am-bulma~="message-body"]
+  & + .message-body
     border-radius: 0 0 $radius $radius
     border-top: none
 
-[data-am-bulma~="message"]
-  @extend [data-am-bulma~="block"]
+.message
+  +block
   background-color: $background
   border-radius: $radius
   // Colors
@@ -26,12 +29,12 @@
     $color-invert: nth($pair, 2)
     $lightning: max((100% - lightness($color)) - 4%, 0%)
     $darkness: max(lightness($color) - 10%, lightness($color))
-    &[data-am-bulma~="is-#{$name}"]
+    &.is-#{$name}
       background-color: lighten($color, $lightning)
-      [data-am-bulma~="message-header"]
+      .message-header
         background-color: $color
         color: $color-invert
-      [data-am-bulma~="message-body"]
+      .message-body
         border-color: $color
         @if (colorLuminance($color) > 0.8)
           color: desaturate(lighten(darken($color, 100%), 40%), 40%)

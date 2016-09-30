@@ -1,8 +1,12 @@
-[data-am-bulma~="modal-background"]
+@import "../utilities/mixins.sass"
+@import "../utilities/variables.sass"
+
+.modal-background
   +overlay
   background-color: rgba($black, 0.86)
 
-[data-am-bulma~="modal-content"]
+.modal-content,
+.modal-card
   margin: 0 20px
   max-height: calc(100vh - 160px)
   overflow: auto
@@ -14,8 +18,8 @@
     max-height: calc(100vh - 40px)
     width: 640px
 
-[data-am-bulma~="modal-close"]
-  @extend [data-am-bulma~="delete"]
+.modal-close
+  +delete
   background: none
   height: 40px
   position: fixed
@@ -23,17 +27,14 @@
   top: 20px
   width: 40px
 
-[data-am-bulma~="modal-card"]
-  @extend [data-am-bulma~="modal-content"]
-  background-color: $white
-  border-radius: $radius-large
+.modal-card
   display: flex
   flex-direction: column
   max-height: calc(100vh - 40px)
   overflow: hidden
 
-[data-am-bulma~="modal-card-head"],
-[data-am-bulma~="modal-card-foot"]
+.modal-card-head,
+.modal-card-foot
   align-items: center
   background-color: $background
   display: flex
@@ -42,27 +43,34 @@
   padding: 20px
   position: relative
 
-[data-am-bulma~="modal-card-head"]
+.modal-card-head
   border-bottom: 1px solid $border
+  border-top-left-radius: $radius-large
+  border-top-right-radius: $radius-large
 
-[data-am-bulma~="modal-card-title"]
+.modal-card-title
   color: $text-strong
-  flex: 1
+  flex-grow: 1
+  flex-shrink: 0
   font-size: $size-4
   line-height: 1
 
-[data-am-bulma~="modal-card-foot"]
+.modal-card-foot
+  border-bottom-left-radius: $radius-large
+  border-bottom-right-radius: $radius-large
   border-top: 1px solid $border
-  [data-am-bulma~="button"]
+  .button
     &:not(:last-child)
       margin-right: 10px
 
-[data-am-bulma~="modal-card-body"]
-  flex: 1
+.modal-card-body
+  background-color: $white
+  flex-grow: 1
+  flex-shrink: 1
   overflow: auto
   padding: 20px
 
-[data-am-bulma~="modal"]
+.modal
   +overlay
   align-items: center
   display: none
@@ -71,5 +79,5 @@
   position: fixed
   z-index: 1986
   // Modifiers
-  &[data-am-bulma~="is-active"]
+  &.is-active
     display: flex

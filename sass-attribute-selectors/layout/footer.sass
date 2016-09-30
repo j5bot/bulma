@@ -1,4 +1,6 @@
-[data-am-bulma~="footer"]
+@import "../utilities/variables.sass"
+
+.footer
   background-color: $background
   padding: 40px 20px 80px
   a
@@ -7,7 +9,7 @@
       color: $text
       &:hover
         color: $text-strong
-      &:not([data-am-bulma~="icon"])
+      &:not(.icon)
         border-bottom: 1px solid $border
         &:hover
           border-bottom-color: $link

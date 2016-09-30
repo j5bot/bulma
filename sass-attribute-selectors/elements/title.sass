@@ -1,6 +1,9 @@
-[data-am-bulma~="title"],
-[data-am-bulma~="subtitle"]
-  @extend [data-am-bulma~="block"]
+@import "../utilities/mixins.sass"
+@import "../utilities/variables.sass"
+
+.title,
+.subtitle
+  +block
   font-weight: $weight-title-normal
   word-break: break-word
   em,
@@ -11,10 +14,10 @@
       border-bottom: 1px solid
   strong
     font-weight: $weight-title-bold
-  [data-am-bulma~="tag"]
+  .tag
     vertical-align: bottom
 
-[data-am-bulma~="title"]
+.title
   color: $text-strong
   font-size: $size-large
   line-height: 1
@@ -23,28 +26,28 @@
     font-size: $size-large
   strong
     color: inherit
-  & + [data-am-bulma~="highlight"]
+  & + .highlight
     margin-top: -10px
-  & + [data-am-bulma~="subtitle"]
+  & + .subtitle
     margin-top: -10px
   // Colors
   @each $size in $sizes
     $i: index($sizes, $size)
-    &[data-am-bulma~="is-#{$i}"]
+    &.is-#{$i}
       font-size: $size
       code
         font-size: nth($sizes, min($i + 1, 6))
   // Modifiers
-  &[data-am-bulma~="is-normal"]
+  &.is-normal
     font-weight: 400
     strong
       font-weight: 700
   // Responsiveness
   +tablet
-    & + [data-am-bulma~="subtitle"]
+    & + .subtitle
       margin-top: -15px
 
-[data-am-bulma~="subtitle"]
+.subtitle
   color: $text
   font-size: $size-medium
   line-height: 1.125
@@ -56,17 +59,17 @@
     vertical-align: top
   strong
     color: $text-strong
-  & + [data-am-bulma~="title"]
+  & + .title
     margin-top: -20px
   // Colors
   @each $size in $sizes
     $i: index($sizes, $size)
-    &[data-am-bulma~="is-#{$i}"]
+    &.is-#{$i}
       font-size: $size
       code
         font-size: nth($sizes, min($i + 1, 6))
   // Modifiers
-  &[data-am-bulma~="is-normal"]
+  &.is-normal
     font-weight: 400
     strong
       font-weight: 700

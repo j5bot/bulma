@@ -1,5 +1,7 @@
-[data-am-bulma~="progress"]
-  @extend [data-am-bulma~="block"]
+@import "../utilities/variables.sass"
+
+.progress
+  +block
   -moz-appearance: none
   -webkit-appearance: none
   border: none
@@ -18,15 +20,15 @@
   // Colors
   @each $name, $pair in $colors
     $color: nth($pair, 1)
-    &[data-am-bulma~="is-#{$name}"]
+    &.is-#{$name}
       &::-webkit-progress-value
         background-color: $color
       &::-moz-progress-bar
         background-color: $color
   // Sizes
-  &[data-am-bulma~="is-small"]
+  &.is-small
     height: 8px
-  &[data-am-bulma~="is-medium"]
+  &.is-medium
     height: 16px
-  &[data-am-bulma~="is-large"]
+  &.is-large
     height: 20px

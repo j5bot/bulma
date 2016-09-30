@@ -6,7 +6,7 @@ cp -R sass sass-attribute-selectors
 
 pushd sass-attribute-selectors
 
-grep -r '^\s*\.' -l --null . | xargs -0 sed -i '' 's#\.\([a-z][^\:,.)]*\)#[data-am-bulma~="\1"]#g'
+grep -r '^\s*\.' -l --null . | xargs -0 ../build-scripts/make-attribute-selector.sh
 
 popd
 

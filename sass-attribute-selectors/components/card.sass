@@ -1,58 +1,60 @@
-[data-am-bulma~="card-header"]
+@import "../utilities/variables.sass"
+
+.card-header
   align-items: stretch
   box-shadow: 0 1px 2px rgba($black, 0.1)
   display: flex
   min-height: 40px
 
-[data-am-bulma~="card-header-title"]
+.card-header-title
   align-items: flex-start
   color: $text-strong
   display: flex
-  flex: 1
+  flex-grow: 1
   font-weight: bold
   padding: 10px
 
-[data-am-bulma~="card-header-icon"]
+.card-header-icon
   align-items: center
   cursor: pointer
   display: flex
   justify-content: center
   width: 40px
 
-[data-am-bulma~="card-image"]
+.card-image
   display: block
   position: relative
 
-[data-am-bulma~="card-content"]
+.card-content
   padding: 20px
-  [data-am-bulma~="title + "][data-am-bulma~="subtitle"]
+  .title + .subtitle
     margin-top: -20px
 
-[data-am-bulma~="card-footer"]
+.card-footer
   border-top: 1px solid $border
   align-items: stretch
   display: flex
 
-[data-am-bulma~="card-footer-item"]
+.card-footer-item
   align-items: center
   display: flex
-  flex: 1
+  flex-grow: 1
   justify-content: center
   padding: 10px
   &:not(:last-child)
     border-right: 1px solid $border
 
-[data-am-bulma~="card"]
+.card
   background-color: $white
   box-shadow: 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)
   color: $text
   max-width: 100%
   position: relative
   width: 300px
-  [data-am-bulma~="media"]:not(:last-child)
+  .media:not(:last-child)
     margin-bottom: 10px
   // Modifiers
-  &[data-am-bulma~="is-fullwidth"]
+  &.is-fullwidth
     width: 100%
-  &[data-am-bulma~="is-rounded"]
+  &.is-rounded
     border-radius: $radius-large

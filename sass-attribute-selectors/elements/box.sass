@@ -1,12 +1,14 @@
-[data-am-bulma~="box"]
-  @extend [data-am-bulma~="block"]
+@import "../utilities/variables.sass"
+
+.box
+  +block
   background-color: $white
   border-radius: $radius-large
   box-shadow: 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)
   display: block
   padding: 20px
 
-a[data-am-bulma~="box"]
+a.box
   &:hover,
   &:focus
     box-shadow: 0 2px 3px rgba($black, 0.1), 0 0 0 1px $link

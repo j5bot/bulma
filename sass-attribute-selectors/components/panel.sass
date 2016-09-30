@@ -1,13 +1,16 @@
-[data-am-bulma~="panel-icon"]
+@import "../utilities/mixins.sass"
+@import "../utilities/variables.sass"
+
+.panel-icon
   +fa(14px, 16px)
   color: $text-light
   float: left
   margin: 0 4px 0 -2px
-  [data-am-bulma~="fa"]
+  .fa
     font-size: inherit
     line-height: inherit
 
-[data-am-bulma~="panel-heading"]
+.panel-heading
   background-color: $background
   border-bottom: 1px solid $border
   border-radius: 4px 4px 0 0
@@ -16,13 +19,13 @@
   font-weight: 300
   padding: 10px
 
-[data-am-bulma~="panel-list"]
+.panel-list
   a
     color: $text
     &:hover
       color: $link
 
-[data-am-bulma~="panel-tabs"]
+.panel-tabs
   display: flex
   font-size: $size-small
   padding: 5px 10px 0
@@ -32,13 +35,13 @@
     margin-bottom: -1px
     padding: 5px
     // Modifiers
-    &[data-am-bulma~="is-active"]
+    &.is-active
       border-bottom-color: $link-active-border
       color: $link-active
   &:not(:last-child)
     border-bottom: 1px solid $border
 
-[data-am-bulma~="panel-block"]
+.panel-block
   color: $text-strong
   display: block
   line-height: 16px
@@ -46,11 +49,11 @@
   &:not(:last-child)
     border-bottom: 1px solid $border
 
-a[data-am-bulma~="panel-block"]
+a.panel-block
   &:hover
     background-color: $background
 
-[data-am-bulma~="panel"]
+.panel
   border: 1px solid $border
   border-radius: $radius-large
   &:not(:last-child)

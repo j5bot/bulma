@@ -1,6 +1,9 @@
-[data-am-bulma~="tabs"]
-  @extend [data-am-bulma~="block"]
-  @extend [data-am-bulma~="unselectable"]
+@import "../utilities/mixins.sass"
+@import "../utilities/variables.sass"
+
+.tabs
+  +block
+  +unselectable
   align-items: stretch
   display: flex
   justify-content: space-between
@@ -22,7 +25,7 @@
       color: $text-strong
   li
     display: block
-    &[data-am-bulma~="is-active"]
+    &.is-active
       a
         border-bottom-color: $link
         color: $link
@@ -30,32 +33,33 @@
     align-items: center
     border-bottom: 1px solid $border
     display: flex
-    flex: 1
+    flex-grow: 1
+    flex-shrink: 0
     justify-content: flex-start
-    &[data-am-bulma~="is-left"]
+    &.is-left
       padding-right: 10px
-    &[data-am-bulma~="is-center"]
+    &.is-center
       flex: none
       justify-content: center
       padding-left: 10px
       padding-right: 10px
-    &[data-am-bulma~="is-right"]
+    &.is-right
       justify-content: flex-end
       padding-left: 10px
-  [data-am-bulma~="icon"]
+  .icon
     &:first-child
       margin-right: 8px
     &:last-child
       margin-left: 8px
   // Alignment
-  &[data-am-bulma~="is-centered"]
+  &.is-centered
     ul
       justify-content: center
-  &[data-am-bulma~="is-right"]
+  &.is-right
     ul
       justify-content: flex-end
   // Styles
-  &[data-am-bulma~="is-boxed"]
+  &.is-boxed
     a
       border: 1px solid transparent
       border-radius: $radius $radius 0 0
@@ -65,15 +69,16 @@
         background-color: $background
         border-bottom-color: $border
     li
-      &[data-am-bulma~="is-active"]
+      &.is-active
         a
           background-color: $white
           border-color: $border
           border-bottom-color: transparent !important
-  &[data-am-bulma~="is-fullwidth"]
+  &.is-fullwidth
     li
-      flex: 1
-  &[data-am-bulma~="is-toggle"]
+      flex-grow: 1
+      flex-shrink: 0
+  &.is-toggle
     a
       border: 1px solid $border
       margin-bottom: 0
@@ -91,7 +96,7 @@
         border-radius: $radius 0 0 $radius
       &:last-child a
         border-radius: 0 $radius $radius 0
-      &[data-am-bulma~="is-active"]
+      &.is-active
         a
           background-color: $primary
           border-color: $primary
@@ -100,30 +105,30 @@
     ul
       border-bottom: none
   // Sizes
-  &[data-am-bulma~="is-small"]
+  &.is-small
     font-size: $size-small
     a
       padding: 2px 8px
-    &[data-am-bulma~="is-boxed"],
-    &[data-am-bulma~="is-toggle"]
+    &.is-boxed,
+    &.is-toggle
       a
         padding-bottom: 1px
         padding-top: 1px
-  &[data-am-bulma~="is-medium"]
+  &.is-medium
     font-size: $size-medium
     a
       padding: 10px 16px
-    &[data-am-bulma~="is-boxed"],
-    &[data-am-bulma~="is-toggle"]
+    &.is-boxed,
+    &.is-toggle
       a
         padding-bottom: 9px
         padding-top: 9px
-  &[data-am-bulma~="is-large"]
+  &.is-large
     font-size: $size-large
     a
       padding: 14px 20px
-    &[data-am-bulma~="is-boxed"],
-    &[data-am-bulma~="is-toggle"]
+    &.is-boxed,
+    &.is-toggle
       a
         padding-bottom: 13px
         padding-top: 13px
