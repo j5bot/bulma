@@ -1,7 +1,7 @@
 @import "../utilities/mixins.sass"
 @import "../utilities/variables.sass"
 
-.tabs
+[data-am-bulma~="tabs"]
   +block
   +unselectable
   align-items: stretch
@@ -25,7 +25,7 @@
       color: $text-strong
   li
     display: block
-    &.is-active
+    &[data-am-bulma~="is-active"]
       a
         border-bottom-color: $link
         color: $link
@@ -36,30 +36,30 @@
     flex-grow: 1
     flex-shrink: 0
     justify-content: flex-start
-    &.is-left
+    &[data-am-bulma~="is-left"]
       padding-right: 10px
-    &.is-center
+    &[data-am-bulma~="is-center"]
       flex: none
       justify-content: center
       padding-left: 10px
       padding-right: 10px
-    &.is-right
+    &[data-am-bulma~="is-right"]
       justify-content: flex-end
       padding-left: 10px
-  .icon
+  [data-am-bulma~="icon"]
     &:first-child
       margin-right: 8px
     &:last-child
       margin-left: 8px
   // Alignment
-  &.is-centered
+  &[data-am-bulma~="is-centered"]
     ul
       justify-content: center
-  &.is-right
+  &[data-am-bulma~="is-right"]
     ul
       justify-content: flex-end
   // Styles
-  &.is-boxed
+  &[data-am-bulma~="is-boxed"]
     a
       border: 1px solid transparent
       border-radius: $radius $radius 0 0
@@ -69,16 +69,16 @@
         background-color: $background
         border-bottom-color: $border
     li
-      &.is-active
+      &[data-am-bulma~="is-active"]
         a
           background-color: $white
           border-color: $border
           border-bottom-color: transparent !important
-  &.is-fullwidth
+  &[data-am-bulma~="is-fullwidth"]
     li
       flex-grow: 1
       flex-shrink: 0
-  &.is-toggle
+  &[data-am-bulma~="is-toggle"]
     a
       border: 1px solid $border
       margin-bottom: 0
@@ -96,7 +96,7 @@
         border-radius: $radius 0 0 $radius
       &:last-child a
         border-radius: 0 $radius $radius 0
-      &.is-active
+      &[data-am-bulma~="is-active"]
         a
           background-color: $primary
           border-color: $primary
@@ -105,30 +105,30 @@
     ul
       border-bottom: none
   // Sizes
-  &.is-small
+  &[data-am-bulma~="is-small"]
     font-size: $size-small
     a
       padding: 2px 8px
-    &.is-boxed,
-    &.is-toggle
+    &[data-am-bulma~="is-boxed"],
+    &[data-am-bulma~="is-toggle"]
       a
         padding-bottom: 1px
         padding-top: 1px
-  &.is-medium
+  &[data-am-bulma~="is-medium"]
     font-size: $size-medium
     a
       padding: 10px 16px
-    &.is-boxed,
-    &.is-toggle
+    &[data-am-bulma~="is-boxed"],
+    &[data-am-bulma~="is-toggle"]
       a
         padding-bottom: 9px
         padding-top: 9px
-  &.is-large
+  &[data-am-bulma~="is-large"]
     font-size: $size-large
     a
       padding: 14px 20px
-    &.is-boxed,
-    &.is-toggle
+    &[data-am-bulma~="is-boxed"],
+    &[data-am-bulma~="is-toggle"]
       a
         padding-bottom: 13px
         padding-top: 13px

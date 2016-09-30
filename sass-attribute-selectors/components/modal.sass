@@ -1,12 +1,12 @@
 @import "../utilities/mixins.sass"
 @import "../utilities/variables.sass"
 
-.modal-background
+[data-am-bulma~="modal-background"]
   +overlay
   background-color: rgba($black, 0.86)
 
-.modal-content,
-.modal-card
+[data-am-bulma~="modal-content"],
+[data-am-bulma~="modal-card"]
   margin: 0 20px
   max-height: calc(100vh - 160px)
   overflow: auto
@@ -18,7 +18,7 @@
     max-height: calc(100vh - 40px)
     width: 640px
 
-.modal-close
+[data-am-bulma~="modal-close"]
   +delete
   background: none
   height: 40px
@@ -27,14 +27,14 @@
   top: 20px
   width: 40px
 
-.modal-card
+[data-am-bulma~="modal-card"]
   display: flex
   flex-direction: column
   max-height: calc(100vh - 40px)
   overflow: hidden
 
-.modal-card-head,
-.modal-card-foot
+[data-am-bulma~="modal-card-head"],
+[data-am-bulma~="modal-card-foot"]
   align-items: center
   background-color: $background
   display: flex
@@ -43,34 +43,34 @@
   padding: 20px
   position: relative
 
-.modal-card-head
+[data-am-bulma~="modal-card-head"]
   border-bottom: 1px solid $border
   border-top-left-radius: $radius-large
   border-top-right-radius: $radius-large
 
-.modal-card-title
+[data-am-bulma~="modal-card-title"]
   color: $text-strong
   flex-grow: 1
   flex-shrink: 0
   font-size: $size-4
   line-height: 1
 
-.modal-card-foot
+[data-am-bulma~="modal-card-foot"]
   border-bottom-left-radius: $radius-large
   border-bottom-right-radius: $radius-large
   border-top: 1px solid $border
-  .button
+  [data-am-bulma~="button"]
     &:not(:last-child)
       margin-right: 10px
 
-.modal-card-body
+[data-am-bulma~="modal-card-body"]
   background-color: $white
   flex-grow: 1
   flex-shrink: 1
   overflow: auto
   padding: 20px
 
-.modal
+[data-am-bulma~="modal"]
   +overlay
   align-items: center
   display: none
@@ -79,5 +79,5 @@
   position: fixed
   z-index: 1986
   // Modifiers
-  &.is-active
+  &[data-am-bulma~="is-active"]
     display: flex

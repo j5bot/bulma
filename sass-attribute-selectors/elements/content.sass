@@ -1,10 +1,10 @@
 @import "../utilities/variables.sass"
 
-.content
+[data-am-bulma~="content"]
   +block
   color: $text
   // Inline
-  a:not(.button)
+  a:not([data-am-bulma~="button"])
     border-bottom: 1px solid $border
     &:visited
       color: $link-visited
@@ -66,11 +66,11 @@
       ul
         list-style-type: square
   // Sizes
-  &.is-medium
+  &[data-am-bulma~="is-medium"]
     font-size: $size-5
     code
       font-size: $size-6
-  &.is-large
+  &[data-am-bulma~="is-large"]
     font-size: $size-4
     code
       font-size: $size-5

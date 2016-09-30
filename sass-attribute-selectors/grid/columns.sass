@@ -1,212 +1,212 @@
 @import "../utilities/mixins.sass"
 @import "../utilities/variables.sass"
 
-.column
+[data-am-bulma~="column"]
   display: block
   flex-basis: 0
   flex-grow: 1
   flex-shrink: 1
   padding: 10px
-  .columns.is-mobile > &.is-narrow
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-narrow"]
     flex: none
-  .columns.is-mobile > &.is-full
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-full"]
     flex: none
     width: 100%
-  .columns.is-mobile > &.is-three-quarters
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-three-quarters"]
     flex: none
     width: 75%
-  .columns.is-mobile > &.is-two-thirds
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-two-thirds"]
     flex: none
     width: 66.6666%
-  .columns.is-mobile > &.is-half
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-half"]
     flex: none
     width: 50%
-  .columns.is-mobile > &.is-one-third
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-one-third"]
     flex: none
     width: 33.3333%
-  .columns.is-mobile > &.is-one-quarter
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-one-quarter"]
     flex: none
     width: 25%
-  .columns.is-mobile > &.is-offset-three-quarters
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-three-quarters"]
     margin-left: 75%
-  .columns.is-mobile > &.is-offset-two-thirds
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-two-thirds"]
     margin-left: 66.6666%
-  .columns.is-mobile > &.is-offset-half
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-half"]
     margin-left: 50%
-  .columns.is-mobile > &.is-offset-one-third
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-one-third"]
     margin-left: 33.3333%
-  .columns.is-mobile > &.is-offset-one-quarter
+  [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-one-quarter"]
     margin-left: 25%
   @for $i from 1 through 12
-    .columns.is-mobile > &.is-#{$i}
+    [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-#{$i}"]
       flex: none
       width: ($i / 12) * 100%
-    .columns.is-mobile > &.is-offset-#{$i}
+    [data-am-bulma~="columns"][data-am-bulma~="is-mobile > &"][data-am-bulma~="is-offset-#{$i}"]
       margin-left: ($i / 12) * 100%
   +mobile
-    &.is-narrow-mobile
+    &[data-am-bulma~="is-narrow-mobile"]
       flex: none
-    &.is-full-mobile
+    &[data-am-bulma~="is-full-mobile"]
       flex: none
       width: 100%
-    &.is-three-quarters-mobile
+    &[data-am-bulma~="is-three-quarters-mobile"]
       flex: none
       width: 75%
-    &.is-two-thirds-mobile
+    &[data-am-bulma~="is-two-thirds-mobile"]
       flex: none
       width: 66.6666%
-    &.is-half-mobile
+    &[data-am-bulma~="is-half-mobile"]
       flex: none
       width: 50%
-    &.is-one-third-mobile
+    &[data-am-bulma~="is-one-third-mobile"]
       flex: none
       width: 33.3333%
-    &.is-one-quarter-mobile
+    &[data-am-bulma~="is-one-quarter-mobile"]
       flex: none
       width: 25%
-    &.is-offset-three-quarters-mobile
+    &[data-am-bulma~="is-offset-three-quarters-mobile"]
       margin-left: 75%
-    &.is-offset-two-thirds-mobile
+    &[data-am-bulma~="is-offset-two-thirds-mobile"]
       margin-left: 66.6666%
-    &.is-offset-half-mobile
+    &[data-am-bulma~="is-offset-half-mobile"]
       margin-left: 50%
-    &.is-offset-one-third-mobile
+    &[data-am-bulma~="is-offset-one-third-mobile"]
       margin-left: 33.3333%
-    &.is-offset-one-quarter-mobile
+    &[data-am-bulma~="is-offset-one-quarter-mobile"]
       margin-left: 25%
     @for $i from 1 through 12
-      &.is-#{$i}-mobile
+      &[data-am-bulma~="is-#{$i}-mobile"]
         flex: none
         width: ($i / 12) * 100%
-      &.is-offset-#{$i}-mobile
+      &[data-am-bulma~="is-offset-#{$i}-mobile"]
         margin-left: ($i / 12) * 100%
   +tablet
-    &.is-narrow,
-    &.is-narrow-tablet
+    &[data-am-bulma~="is-narrow"],
+    &[data-am-bulma~="is-narrow-tablet"]
       flex: none
-    &.is-full,
-    &.is-full-tablet
+    &[data-am-bulma~="is-full"],
+    &[data-am-bulma~="is-full-tablet"]
       flex: none
       width: 100%
-    &.is-three-quarters,
-    &.is-three-quarters-tablet
+    &[data-am-bulma~="is-three-quarters"],
+    &[data-am-bulma~="is-three-quarters-tablet"]
       flex: none
       width: 75%
-    &.is-two-thirds,
-    &.is-two-thirds-tablet
+    &[data-am-bulma~="is-two-thirds"],
+    &[data-am-bulma~="is-two-thirds-tablet"]
       flex: none
       width: 66.6666%
-    &.is-half,
-    &.is-half-tablet
+    &[data-am-bulma~="is-half"],
+    &[data-am-bulma~="is-half-tablet"]
       flex: none
       width: 50%
-    &.is-one-third,
-    &.is-one-third-tablet
+    &[data-am-bulma~="is-one-third"],
+    &[data-am-bulma~="is-one-third-tablet"]
       flex: none
       width: 33.3333%
-    &.is-one-quarter,
-    &.is-one-quarter-tablet
+    &[data-am-bulma~="is-one-quarter"],
+    &[data-am-bulma~="is-one-quarter-tablet"]
       flex: none
       width: 25%
-    &.is-offset-three-quarters,
-    &.is-offset-three-quarters-tablet
+    &[data-am-bulma~="is-offset-three-quarters"],
+    &[data-am-bulma~="is-offset-three-quarters-tablet"]
       margin-left: 75%
-    &.is-offset-two-thirds,
-    &.is-offset-two-thirds-tablet
+    &[data-am-bulma~="is-offset-two-thirds"],
+    &[data-am-bulma~="is-offset-two-thirds-tablet"]
       margin-left: 66.6666%
-    &.is-offset-half,
-    &.is-offset-half-tablet
+    &[data-am-bulma~="is-offset-half"],
+    &[data-am-bulma~="is-offset-half-tablet"]
       margin-left: 50%
-    &.is-offset-one-third,
-    &.is-offset-one-third-tablet
+    &[data-am-bulma~="is-offset-one-third"],
+    &[data-am-bulma~="is-offset-one-third-tablet"]
       margin-left: 33.3333%
-    &.is-offset-one-quarter,
-    &.is-offset-one-quarter-tablet
+    &[data-am-bulma~="is-offset-one-quarter"],
+    &[data-am-bulma~="is-offset-one-quarter-tablet"]
       margin-left: 25%
     @for $i from 1 through 12
-      &.is-#{$i},
-      &.is-#{$i}-tablet
+      &[data-am-bulma~="is-#{$i}"],
+      &[data-am-bulma~="is-#{$i}-tablet"]
         flex: none
         width: ($i / 12) * 100%
-      &.is-offset-#{$i},
-      &.is-offset-#{$i}-tablet
+      &[data-am-bulma~="is-offset-#{$i}"],
+      &[data-am-bulma~="is-offset-#{$i}-tablet"]
         margin-left: ($i / 12) * 100%
   +desktop
-    &.is-narrow-desktop
+    &[data-am-bulma~="is-narrow-desktop"]
       flex: none
-    &.is-full-desktop
+    &[data-am-bulma~="is-full-desktop"]
       flex: none
       width: 100%
-    &.is-three-quarters-desktop
+    &[data-am-bulma~="is-three-quarters-desktop"]
       flex: none
       width: 75%
-    &.is-two-thirds-desktop
+    &[data-am-bulma~="is-two-thirds-desktop"]
       flex: none
       width: 66.6666%
-    &.is-half-desktop
+    &[data-am-bulma~="is-half-desktop"]
       flex: none
       width: 50%
-    &.is-one-third-desktop
+    &[data-am-bulma~="is-one-third-desktop"]
       flex: none
       width: 33.3333%
-    &.is-one-quarter-desktop
+    &[data-am-bulma~="is-one-quarter-desktop"]
       flex: none
       width: 25%
-    &.is-offset-three-quarters-desktop
+    &[data-am-bulma~="is-offset-three-quarters-desktop"]
       margin-left: 75%
-    &.is-offset-two-thirds-desktop
+    &[data-am-bulma~="is-offset-two-thirds-desktop"]
       margin-left: 66.6666%
-    &.is-offset-half-desktop
+    &[data-am-bulma~="is-offset-half-desktop"]
       margin-left: 50%
-    &.is-offset-one-third-desktop
+    &[data-am-bulma~="is-offset-one-third-desktop"]
       margin-left: 33.3333%
-    &.is-offset-one-quarter-desktop
+    &[data-am-bulma~="is-offset-one-quarter-desktop"]
       margin-left: 25%
     @for $i from 1 through 12
-      &.is-#{$i}-desktop
+      &[data-am-bulma~="is-#{$i}-desktop"]
         flex: none
         width: ($i / 12) * 100%
-      &.is-offset-#{$i}-desktop
+      &[data-am-bulma~="is-offset-#{$i}-desktop"]
         margin-left: ($i / 12) * 100%
   +widescreen
-    &.is-narrow-widescreen
+    &[data-am-bulma~="is-narrow-widescreen"]
       flex: none
-    &.is-full-widescreen
+    &[data-am-bulma~="is-full-widescreen"]
       flex: none
       width: 100%
-    &.is-three-quarters-widescreen
+    &[data-am-bulma~="is-three-quarters-widescreen"]
       flex: none
       width: 75%
-    &.is-two-thirds-widescreen
+    &[data-am-bulma~="is-two-thirds-widescreen"]
       flex: none
       width: 66.6666%
-    &.is-half-widescreen
+    &[data-am-bulma~="is-half-widescreen"]
       flex: none
       width: 50%
-    &.is-one-third-widescreen
+    &[data-am-bulma~="is-one-third-widescreen"]
       flex: none
       width: 33.3333%
-    &.is-one-quarter-widescreen
+    &[data-am-bulma~="is-one-quarter-widescreen"]
       flex: none
       width: 25%
-    &.is-offset-three-quarters-widescreen
+    &[data-am-bulma~="is-offset-three-quarters-widescreen"]
       margin-left: 75%
-    &.is-offset-two-thirds-widescreen
+    &[data-am-bulma~="is-offset-two-thirds-widescreen"]
       margin-left: 66.6666%
-    &.is-offset-half-widescreen
+    &[data-am-bulma~="is-offset-half-widescreen"]
       margin-left: 50%
-    &.is-offset-one-third-widescreen
+    &[data-am-bulma~="is-offset-one-third-widescreen"]
       margin-left: 33.3333%
-    &.is-offset-one-quarter-widescreen
+    &[data-am-bulma~="is-offset-one-quarter-widescreen"]
       margin-left: 25%
     @for $i from 1 through 12
-      &.is-#{$i}-widescreen
+      &[data-am-bulma~="is-#{$i}-widescreen"]
         flex: none
         width: ($i / 12) * 100%
-      &.is-offset-#{$i}-widescreen
+      &[data-am-bulma~="is-offset-#{$i}-widescreen"]
         margin-left: ($i / 12) * 100%
 
-.columns
+[data-am-bulma~="columns"]
   margin-left: -10px
   margin-right: -10px
   margin-top: -10px
@@ -215,9 +215,9 @@
   &:not(:last-child)
     margin-bottom: 10px
   // Modifiers
-  &.is-centered
+  &[data-am-bulma~="is-centered"]
     justify-content: center
-  &.is-gapless
+  &[data-am-bulma~="is-gapless"]
     margin-left: 0
     margin-right: 0
     margin-top: 0
@@ -225,30 +225,30 @@
       margin-bottom: 0
     &:not(:last-child)
       margin-bottom: 20px
-    & > .column
+    & > [data-am-bulma~="column"]
       margin: 0
       padding: 0
-  &.is-grid
+  &[data-am-bulma~="is-grid"]
     // Responsiveness
     +tablet
       flex-wrap: wrap
-      & > .column
+      & > [data-am-bulma~="column"]
         max-width: 33.3333%
         padding: 10px
         width: 33.3333%
-        & + .column
+        & + [data-am-bulma~="column"]
           margin-left: 0
-  &.is-mobile
+  &[data-am-bulma~="is-mobile"]
     display: flex
-  &.is-multiline
+  &[data-am-bulma~="is-multiline"]
     flex-wrap: wrap
-  &.is-vcentered
+  &[data-am-bulma~="is-vcentered"]
     align-items: center
   // Responsiveness
   +tablet
-    &:not(.is-desktop)
+    &:not([data-am-bulma~="is-desktop"])
       display: flex
   +desktop
     // Modifiers
-    &.is-desktop
+    &[data-am-bulma~="is-desktop"]
       display: flex

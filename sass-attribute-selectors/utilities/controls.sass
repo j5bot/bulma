@@ -45,11 +45,11 @@ $control-icon-active: $grey-light !default
     border-color: $control-hover-border
   &:active,
   &:focus,
-  &.is-active
+  &[data-am-bulma~="is-active"]
     border-color: $control-active-border
     outline: none
   &[disabled],
-  &.is-disabled
+  &[data-am-bulma~="is-disabled"]
     background-color: $control-disabled-background
     border-color: $control-disabled
     cursor: not-allowed

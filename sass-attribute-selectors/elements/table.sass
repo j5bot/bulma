@@ -10,7 +10,7 @@ $table-head: $text-light !default
 $table-row-hover-background: $white-ter !default
 $table-row-even-background: $white-bis !default
 
-.table
+[data-am-bulma~="table"]
   background-color: $table-background
   color: $table
   margin-bottom: 20px
@@ -22,18 +22,18 @@ $table-row-even-background: $white-bis !default
     padding: 8px 10px
     vertical-align: top
     // Modifiers
-    &.is-icon
+    &[data-am-bulma~="is-icon"]
       padding: 5px
       text-align: center
       white-space: nowrap
       width: 1%
-      .fa
+      [data-am-bulma~="fa"]
         +fa(21px, 24px)
-      &.is-link
+      &[data-am-bulma~="is-link"]
         padding: 0
         & > a
           padding: 5px
-    &.is-link
+    &[data-am-bulma~="is-link"]
       padding: 0
       & > a
         display: block
@@ -41,7 +41,7 @@ $table-row-even-background: $white-bis !default
         &:hover
           background-color: $link
           color: $link-invert
-    &.is-narrow
+    &[data-am-bulma~="is-narrow"]
       white-space: nowrap
       width: 1%
   th
@@ -67,7 +67,7 @@ $table-row-even-background: $white-bis !default
       border-width: 2px 0 0
       color: $table-head
   // Modifiers
-  &.is-bordered
+  &[data-am-bulma~="is-bordered"]
     td,
     th
       border-width: 1px
@@ -76,22 +76,22 @@ $table-row-even-background: $white-bis !default
         td,
         th
           border-bottom-width: 1px
-  &.is-narrow
+  &[data-am-bulma~="is-narrow"]
     td,
     th
       padding: 5px 10px
       // Modifiers
-      &.is-icon
+      &[data-am-bulma~="is-icon"]
         padding: 2px
-        &.is-link
+        &[data-am-bulma~="is-link"]
           padding: 0
           & > a
             padding: 2px
-      &.is-link
+      &[data-am-bulma~="is-link"]
         padding: 0
         & > a
           padding: 5px 10px
-  &.is-striped
+  &[data-am-bulma~="is-striped"]
     tbody
       tr
         &:nth-child(even)

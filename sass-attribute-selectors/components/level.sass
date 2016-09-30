@@ -1,41 +1,41 @@
 @import "../utilities/mixins.sass"
 @import "../utilities/variables.sass"
 
-.level-item
-  .title,
-  .subtitle
+[data-am-bulma~="level-item"]
+  [data-am-bulma~="title"],
+  [data-am-bulma~="subtitle"]
     margin-bottom: 0
   // Responsiveness
   +mobile
     &:not(:last-child)
       margin-bottom: 10px
 
-.level-left,
-.level-right
-  .level-item
+[data-am-bulma~="level-left"],
+[data-am-bulma~="level-right"]
+  [data-am-bulma~="level-item"]
     &:not(:last-child)
       margin-right: 10px
     // Modifiers
-    &.is-flexible
+    &[data-am-bulma~="is-flexible"]
       flex-grow: 1
 
-.level-left
+[data-am-bulma~="level-left"]
   // Responsiveness
   +mobile
-    & + .level-right
+    & + [data-am-bulma~="level-right"]
       margin-top: 20px
   +tablet
     align-items: center
     display: flex
 
-.level-right
+[data-am-bulma~="level-right"]
   // Responsiveness
   +tablet
     align-items: center
     display: flex
     justify-content: flex-end
 
-.level
+[data-am-bulma~="level"]
   +block
   align-items: center
   justify-content: space-between
@@ -45,16 +45,16 @@
     display: inline-block
     vertical-align: top
   // Modifiers
-  &.is-mobile
+  &[data-am-bulma~="is-mobile"]
     display: flex
-    & > .level-item
+    & > [data-am-bulma~="level-item"]
       &:not(:last-child)
         margin-bottom: 0
-      &:not(.is-narrow)
+      &:not([data-am-bulma~="is-narrow"])
         flex-grow: 1
   // Responsiveness
   +tablet
     display: flex
-    & > .level-item
-      &:not(.is-narrow)
+    & > [data-am-bulma~="level-item"]
+      &:not([data-am-bulma~="is-narrow"])
         flex-grow: 1

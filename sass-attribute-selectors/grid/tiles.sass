@@ -1,7 +1,7 @@
 @import "../utilities/mixins.sass"
 @import "../utilities/variables.sass"
 
-.tile
+[data-am-bulma~="tile"]
   align-items: stretch
   display: block
   flex-basis: auto
@@ -9,7 +9,7 @@
   flex-shrink: 1
   min-height: min-content
   // Modifiers
-  &.is-ancestor
+  &[data-am-bulma~="is-ancestor"]
     margin-left: -10px
     margin-right: -10px
     margin-top: -10px
@@ -17,19 +17,19 @@
       margin-bottom: -10px
     &:not(:last-child)
       margin-bottom: 10px
-  &.is-child
+  &[data-am-bulma~="is-child"]
     margin: 0 !important
-  &.is-parent
+  &[data-am-bulma~="is-parent"]
     padding: 10px
-  &.is-vertical
+  &[data-am-bulma~="is-vertical"]
     flex-direction: column
-    & > .tile.is-child:not(:last-child)
+    & > [data-am-bulma~="tile"][data-am-bulma~="is-child"]:not(:last-child)
       margin-bottom: 20px !important
   // Responsiveness
   +tablet
-    &:not(.is-child)
+    &:not([data-am-bulma~="is-child"])
       display: flex
     @for $i from 1 through 12
-      &.is-#{$i}
+      &[data-am-bulma~="is-#{$i}"]
         flex: none
         width: ($i / 12) * 100%

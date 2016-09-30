@@ -1,25 +1,25 @@
 @import "../utilities/mixins.sass"
 @import "../utilities/variables.sass"
 
-.notification
+[data-am-bulma~="notification"]
   +block
   +clearfix
   background-color: $background
   border-radius: $radius
   padding: 16px 20px
   position: relative
-  .delete
+  [data-am-bulma~="delete"]
     border-radius: 0 $radius
     float: right
     margin: -16px -20px 0 20px
-  .title,
-  .subtitle,
-  .content
+  [data-am-bulma~="title"],
+  [data-am-bulma~="subtitle"],
+  [data-am-bulma~="content"]
     color: inherit
   // Colors
   @each $name, $pair in $colors
     $color: nth($pair, 1)
     $color-invert: nth($pair, 2)
-    &.is-#{$name}
+    &[data-am-bulma~="is-#{$name}"]
       background-color: $color
       color: $color-invert

@@ -1,13 +1,13 @@
 @import "../utilities/mixins.sass"
 @import "../utilities/variables.sass"
 
-.section
+[data-am-bulma~="section"]
   background-color: $white
   padding: 40px 20px
   // Responsiveness
   +desktop
     // Sizes
-    &.is-medium
+    &[data-am-bulma~="is-medium"]
       padding: 120px 20px
-    &.is-large
+    &[data-am-bulma~="is-large"]
       padding: 240px 20px

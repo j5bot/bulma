@@ -63,13 +63,13 @@
   &:hover
     background-color: rgba($black, 0.2)
   // Sizes
-  &.is-small
+  &[data-am-bulma~="is-small"]
     height: 16px
     width: 16px
-  &.is-medium
+  &[data-am-bulma~="is-medium"]
     height: 32px
     width: 32px
-  &.is-large
+  &[data-am-bulma~="is-large"]
     height: 40px
     width: 40px
 
@@ -108,7 +108,7 @@
   &:hover
     background-color: $background
   // Modifers
-  &.is-active
+  &[data-am-bulma~="is-active"]
     span
       background-color: $link
       &:nth-child(1)
