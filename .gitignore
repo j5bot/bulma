@@ -1,8 +1,16 @@
-.sass-cache
+# Files
 .DS_Store
-node_modules
+.ruby-version
 npm-debug.log
+
+# Folders
 .idea/
+.sass-cache
+_gh_pages
+_site
+node_modules
+
+# Attribute Selectors Stuff
 config.codekit
 codekit3.config
 bulma-attribute-selectors.log
