@@ -1,13 +1,11 @@
-@import "../utilities/mixins.sass"
-@import "../utilities/variables.sass"
-
 [data-am-bulma~="tabs"]
   +block
+  +overflow-touch
   +unselectable
   align-items: stretch
   display: flex
+  font-size: $size-normal
   justify-content: space-between
-  line-height: 24px
   overflow: hidden
   overflow-x: auto
   white-space: nowrap
@@ -18,7 +16,7 @@
     display: flex
     justify-content: center
     margin-bottom: -1px
-    padding: 6px 12px
+    padding: 0.5em 1em
     vertical-align: top
     &:hover
       border-bottom-color: $text-strong
@@ -27,8 +25,8 @@
     display: block
     &[data-am-bulma~="is-active"]
       a
-        border-bottom-color: $link
-        color: $link
+        border-bottom-color: $primary
+        color: $primary
   ul
     align-items: center
     border-bottom: 1px solid $border
@@ -37,20 +35,20 @@
     flex-shrink: 0
     justify-content: flex-start
     &[data-am-bulma~="is-left"]
-      padding-right: 10px
+      padding-right: 0.75em
     &[data-am-bulma~="is-center"]
       flex: none
       justify-content: center
-      padding-left: 10px
-      padding-right: 10px
+      padding-left: 0.75em
+      padding-right: 0.75em
     &[data-am-bulma~="is-right"]
       justify-content: flex-end
-      padding-left: 10px
+      padding-left: 0.75em
   [data-am-bulma~="icon"]
     &:first-child
-      margin-right: 8px
+      margin-right: 0.5em
     &:last-child
-      margin-left: 8px
+      margin-left: 0.5em
   // Alignment
   &[data-am-bulma~="is-centered"]
     ul
@@ -63,8 +61,6 @@
     a
       border: 1px solid transparent
       border-radius: $radius $radius 0 0
-      padding-bottom: 5px
-      padding-top: 5px
       &:hover
         background-color: $background
         border-bottom-color: $border
@@ -82,8 +78,6 @@
     a
       border: 1px solid $border
       margin-bottom: 0
-      padding-bottom: 5px
-      padding-top: 5px
       position: relative
       &:hover
         background-color: $background
@@ -107,28 +101,7 @@
   // Sizes
   &[data-am-bulma~="is-small"]
     font-size: $size-small
-    a
-      padding: 2px 8px
-    &[data-am-bulma~="is-boxed"],
-    &[data-am-bulma~="is-toggle"]
-      a
-        padding-bottom: 1px
-        padding-top: 1px
   &[data-am-bulma~="is-medium"]
     font-size: $size-medium
-    a
-      padding: 10px 16px
-    &[data-am-bulma~="is-boxed"],
-    &[data-am-bulma~="is-toggle"]
-      a
-        padding-bottom: 9px
-        padding-top: 9px
   &[data-am-bulma~="is-large"]
     font-size: $size-large
-    a
-      padding: 14px 20px
-    &[data-am-bulma~="is-boxed"],
-    &[data-am-bulma~="is-toggle"]
-      a
-        padding-bottom: 13px
-        padding-top: 13px

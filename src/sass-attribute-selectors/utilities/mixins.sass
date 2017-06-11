@@ -1,21 +1,18 @@
-@import "./animations.sass"
-@import "./variables.sass"
-
 =arrow($color)
   border: 1px solid $color
   border-right: 0
   border-top: 0
   content: " "
   display: block
-  height: 7px
+  height: 0.5em
   pointer-events: none
   position: absolute
   transform: rotate(-45deg)
-  width: 7px
+  width: 0.5em
 
 =block
   &:not(:last-child)
-    margin-bottom: 20px
+    margin-bottom: 1.5rem
 
 =clearfix
   &:after
@@ -23,55 +20,67 @@
     content: " "
     display: table
 
-=center($size)
-  left: 50%
-  margin-left: -($size / 2)
-  margin-top: -($size / 2)
+=center($width, $height: 0)
   position: absolute
-  top: 50%
+  @if $height != 0
+    left: calc(50% - (#{$width} / 2))
+    top: calc(50% - (#{$height} / 2))
+  @else
+    left: calc(50% - (#{$width} / 2))
+    top: calc(50% - (#{$width} / 2))
 
 =delete
   +unselectable
   -moz-appearance: none
   -webkit-appearance: none
-  background-color: rgba($black, 0.1)
+  background-color: rgba($black, 0.2)
   border: none
   border-radius: 290486px
   cursor: pointer
   display: inline-block
-  height: 24px
+  flex-grow: 0
+  flex-shrink: 0
+  font-size: $size-normal
+  height: 20px
+  max-height: 20px
+  max-width: 20px
+  min-height: 20px
+  min-width: 20px
   outline: none
   position: relative
   vertical-align: top
-  width: 24px
+  width: 20px
   &:before,
   &:after
     background-color: $white
     content: ""
     display: block
-    height: 2px
     left: 50%
-    margin-left: -25%
-    margin-top: -1px
     position: absolute
     top: 50%
-    width: 50%
+    transform: translateX(-50%) translateY(-50%) rotate(45deg)
+    transform-origin: center center
   &:before
-    transform: rotate(45deg)
+    height: 2px
+    width: 50%
   &:after
-    transform: rotate(-45deg)
-  &:hover
-    background-color: rgba($black, 0.2)
+    height: 50%
+    width: 2px
+  &:hover,
+  &:focus
+    background-color: rgba($black, 0.3)
+  &:active
+    background-color: rgba($black, 0.4)
   // Sizes
   &[data-am-bulma~="is-small"]
     height: 16px
     width: 16px
   &[data-am-bulma~="is-medium"]
+    height: 24px
+    width: 24px
+  &[data-am-bulma~="is-large"]
     height: 32px
     width: 32px
-  &[data-am-bulma~="is-large"]
-    height: 40px
-    width: 40px
 
 =fa($size, $dimensions)
   display: inline-block
@@ -123,16 +132,19 @@
         transform-origin: left bottom
 
 =loader
-  animation: spin-around 500ms infinite linear
+  animation: spinAround 500ms infinite linear
   border: 2px solid $border
   border-radius: 290486px
   border-right-color: transparent
   border-top-color: transparent
   content: ""
   display: block
-  height: 16px
+  height: 1em
   position: relative
-  width: 16px
+  width: 1em
+
+=overflow-touch
+  -webkit-overflow-scrolling: touch
 
 =overlay($offset: 0)
   bottom: $offset
@@ -147,18 +159,6 @@
     &:#{$placeholder}-placeholder
       @content
 
-=replace($background, $width, $height)
-  background-color: $background
-  background-position: center center
-  background-repeat: no-repeat
-  background-size: $width $height
-  display: block
-  height: $height
-  outline: none
-  overflow: hidden
-  text-indent: -290486px
-  width: $width
-
 =unselectable
   -webkit-touch-callout: none
   -webkit-user-select: none
@@ -167,10 +167,6 @@
   user-select: none
 
 // Responsiveness
-
-$tablet: 769px !default
-$desktop: 980px !default
-$widescreen: 1180px !default
 
 =from($device)
   @media screen and (min-width: $device)
@@ -185,7 +181,7 @@ $widescreen: 1180px !default
     @content
 
 =tablet
-  @media screen and (min-width: $tablet)
+  @media screen and (min-width: $tablet), print
     @content
 
 =tablet-only
@@ -206,4 +202,12 @@ $widescreen: 1180px !default
 
 =widescreen
   @media screen and (min-width: $widescreen)
+    @content
+
+=widescreen-only
+  @media screen and (min-width: $widescreen) and (max-width: $fullhd - 1px)
+    @content
+
+=fullhd
+  @media screen and (min-width: $fullhd)
     @content

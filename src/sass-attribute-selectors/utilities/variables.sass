@@ -1,3 +1,5 @@
+@import "./functions.sass"
+
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // 1. Initial variables
@@ -26,36 +28,22 @@ $purple:       hsl(271, 100%, 71%) !default
 $red:          hsl(348, 100%, 61%) !default
 
 // Typography
-$family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
-$family-monospace: monospace !default
-$render-mode: optimizeLegibility !default
+$family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
+$family-monospace: "Inconsolata", "Consolas", "Monaco", monospace !default
 
-$size-1: 3rem !default
-$size-2: 2.5rem !default
-$size-3: 2rem !default
-$size-4: 1.5rem !default
-$size-5: 1.25rem !default
-$size-6: 1rem !default
-$size-7: 0.75rem !default
+$size-1: 48px !default
+$size-2: 40px !default
+$size-3: 28px !default
+$size-4: 24px !default
+$size-5: 18px !default
+$size-6: 14px !default
 
-$weight-light: 300 !default
+$size-7: 11px !default
+
 $weight-normal: 400 !default
-$weight-semibold: 500 !default
 $weight-bold: 700 !default
-
-// Body
-$body-background: #fff !default
-$body-size: 16px !default
-
-// Responsiveness
-// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
-$tablet: 769px !default
-// 960px container + 40px
-$desktop: 1000px !default
-// 1152px container + 40
-$widescreen: 1192px !default
-// 1344px container + 40
-$fullhd: 1384px !default
+$weight-title-normal: 300 !default
+$weight-title-bold: 500 !default
 
 // Miscellaneous
 $easing: ease-out !default
@@ -83,23 +71,19 @@ $dark: $grey-darker !default
 // 3. Applied variables
 
 // Invert colors
-$orange-invert: findColorInvert($orange) !default
-$yellow-invert: findColorInvert($yellow) !default
-$green-invert: findColorInvert($green) !default
-$turquoise-invert: findColorInvert($turquoise) !default
-$blue-invert: findColorInvert($blue) !default
-$purple-invert: findColorInvert($purple) !default
-$red-invert: findColorInvert($red) !default
+$primary-invert: findColorInvert($primary) !default
 
-$primary-invert: $turquoise-invert !default
-$info-invert: $blue-invert !default
-$success-invert: $green-invert !default
-$warning-invert: $yellow-invert !default
-$danger-invert: $red-invert !default
+$info-invert: findColorInvert($info) !default
+$success-invert: findColorInvert($success) !default
+$warning-invert: findColorInvert($warning) !default
+$danger-invert: findColorInvert($danger) !default
+
 $light-invert: $dark !default
 $dark-invert: $light !default
 
 // General colors
+$body-background: $white-ter !default
+
 $background: $white-ter !default
 
 $border: $grey-lighter !default
@@ -124,13 +108,11 @@ $link-invert: $primary-invert !default
 $link-visited: $purple !default
 
 $link-hover: $grey-darker !default
-$link-hover-border: $grey-light !default
-
-$link-focus: $grey-darker !default
-$link-focus-border: $primary !default
+$link-hover-background: $white-ter !default
+$link-hover-border: $grey-darker !default
 
 $link-active: $grey-darker !default
-$link-active-border: $grey-dark !default
+$link-active-border: $grey-darker !default
 
 // Typography
 $family-primary: $family-sans-serif !default
@@ -139,12 +121,13 @@ $family-code: $family-monospace !default
 $size-small: $size-7 !default
 $size-normal: $size-6 !default
 $size-medium: $size-5 !default
-$size-large: $size-4 !default
+$size-large: $size-3 !default
+$size-huge: $size-1 !default
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // 4. Lists and maps
 
-$colors: ("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert), "info": ($info, $info-invert), "success": ($success, $success-invert), "warning": ($warning, $warning-invert), "danger": ($danger, $danger-invert)) !default
+$colors: (white: ($white, $black), black: ($black, $white), light: ($light, $light-invert), dark: ($dark, $dark-invert), primary: ($primary, $primary-invert), info: ($info, $info-invert), success: ($success, $success-invert), warning: ($warning, $warning-invert), danger: ($danger, $danger-invert)) !default
 
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 !default

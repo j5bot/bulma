@@ -1,39 +1,46 @@
-@import "../utilities/mixins.sass"
-@import "../utilities/variables.sass"
-
 [data-am-bulma~="level-item"]
+  align-items: center
+  display: flex
+  flex-basis: auto
+  flex-grow: 0
+  flex-shrink: 0
+  justify-content: center
   [data-am-bulma~="title"],
   [data-am-bulma~="subtitle"]
     margin-bottom: 0
   // Responsiveness
   +mobile
     &:not(:last-child)
-      margin-bottom: 10px
+      margin-bottom: 0.75rem
 
 [data-am-bulma~="level-left"],
 [data-am-bulma~="level-right"]
+  flex-basis: auto
+  flex-grow: 0
+  flex-shrink: 0
   [data-am-bulma~="level-item"]
     &:not(:last-child)
-      margin-right: 10px
+      margin-right: 0.75rem
     // Modifiers
     &[data-am-bulma~="is-flexible"]
       flex-grow: 1
 
 [data-am-bulma~="level-left"]
+  align-items: center
+  justify-content: flex-start
   // Responsiveness
   +mobile
     & + [data-am-bulma~="level-right"]
-      margin-top: 20px
+      margin-top: 1.5rem
   +tablet
-    align-items: center
     display: flex
 
 [data-am-bulma~="level-right"]
+  align-items: center
+  justify-content: flex-end
   // Responsiveness
   +tablet
-    align-items: center
     display: flex
-    justify-content: flex-end
 
 [data-am-bulma~="level"]
   +block
@@ -47,7 +54,12 @@
   // Modifiers
   &[data-am-bulma~="is-mobile"]
     display: flex
-    & > [data-am-bulma~="level-item"]
+    [data-am-bulma~="level-left"],
+    [data-am-bulma~="level-right"]
+      display: flex
+    [data-am-bulma~="level-left + "][data-am-bulma~="level-right"]
+      margin-top: 0
+    [data-am-bulma~="level-item"]
       &:not(:last-child)
         margin-bottom: 0
       &:not([data-am-bulma~="is-narrow"])

@@ -1,6 +1,3 @@
-@import "../utilities/mixins.sass"
-@import "../utilities/variables.sass"
-
 [data-am-bulma~="block"]
   +block
 
@@ -8,13 +5,19 @@
   position: relative
   +desktop
     margin: 0 auto
-    max-width: 960px
+    max-width: $desktop - 40px
+    width: $desktop - 40px
     // Modifiers
     &[data-am-bulma~="is-fluid"]
       margin: 0 20px
       max-width: none
+      width: auto
   +widescreen
-    max-width: 1200px
+    max-width: $widescreen - 40px
+    width: $widescreen - 40px
+  +fullhd
+    max-width: $fullhd - 40px
+    width: $fullhd - 40px
 
 [data-am-bulma~="delete"]
   +delete
@@ -23,19 +26,6 @@
   font-size: 21px
   text-align: center
   vertical-align: top
-
-[data-am-bulma~="icon"]
-  +fa(21px, 24px)
-  [data-am-bulma~="fa"]
-    font-size: inherit
-    line-height: inherit
-  // Sizes
-  &[data-am-bulma~="is-small"]
-    +fa(14px, 16px)
-  &[data-am-bulma~="is-medium"]
-    +fa(28px, 32px)
-  &[data-am-bulma~="is-large"]
-    +fa(42px, 48px)
 
 [data-am-bulma~="heading"]
   display: block
@@ -46,8 +36,7 @@
 
 [data-am-bulma~="highlight"]
   +block
-  font-size: 12px
-  font-weight: normal
+  font-weight: $weight-normal
   max-width: 100%
   overflow: hidden
   padding: 0
@@ -59,53 +48,15 @@
   +loader
 
 [data-am-bulma~="number"]
-  background-color: $background
-  border-radius: 290486px
-  display: inline-block
-  font-size: $size-medium
-  vertical-align: top
-
-[data-am-bulma~="tag"]
   align-items: center
   background-color: $background
   border-radius: 290486px
-  color: $text
   display: inline-flex
-  font-size: 12px
-  height: 24px
+  font-size: $size-medium
+  height: 2em
   justify-content: center
-  line-height: 16px
-  padding-left: 10px
-  padding-right: 10px
+  margin-right: 1.5rem
+  min-width: 2.5em
+  padding: 0.25rem 0.5rem
+  text-align: center
   vertical-align: top
-  white-space: nowrap
-  [data-am-bulma~="delete"]
-    margin-left: 4px
-    margin-right: -6px
-  // Colors
-  @each $name, $pair in $colors
-    $color: nth($pair, 1)
-    $color-invert: nth($pair, 2)
-    &[data-am-bulma~="is-#{$name}"]
-      background-color: $color
-      color: $color-invert
-  // Sizes
-  &[data-am-bulma~="is-small"]
-    font-size: $size-small
-    height: 20px
-    padding-left: 8px
-    padding-right: 8px
-  &[data-am-bulma~="is-medium"]
-    font-size: $size-normal
-    height: 32px
-    padding-left: 14px
-    padding-right: 14px
-  &[data-am-bulma~="is-large"]
-    font-size: $size-5
-    height: 40px
-    line-height: 24px
-    padding-left: 18px
-    padding-right: 18px
-    [data-am-bulma~="delete"]
-      margin-left: 4px
-      margin-right: -8px

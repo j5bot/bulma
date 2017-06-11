@@ -1,7 +1,4 @@
-@import "../utilities/mixins.sass"
-@import "../utilities/variables.sass"
-
-$nav-height: 50px !default
+$nav-height: 3.25rem !default
 
 // Components
 
@@ -16,20 +13,20 @@ $nav-height: 50px !default
   display: flex
   flex-grow: 0
   flex-shrink: 0
+  font-size: $size-normal
   justify-content: center
-  padding: 10px
+  line-height: 1.5
+  padding: 0.5rem 0.75rem
   a
     flex-grow: 1
     flex-shrink: 0
   img
-    max-height: 24px
-  [data-am-bulma~="button + "][data-am-bulma~="button"]
-    margin-left: 10px
+    max-height: 1.75rem
   [data-am-bulma~="tag"]
-    &:first-child
-      margin-right: 5px
-    &:last-child
-      margin-left: 5px
+    &:first-child:not(:last-child)
+      margin-right: 0.5rem
+    &:last-child:not(:first-child)
+      margin-left: 0.5rem
   // Responsiveness
   +mobile
     justify-content: flex-start
@@ -45,63 +42,68 @@ a[data-am-bulma~="nav-item"]
   &[data-am-bulma~="is-tab"]
     border-bottom: 1px solid transparent
     border-top: 1px solid transparent
-    padding-left: 12px
-    padding-right: 12px
+    padding-bottom: calc(0.75rem - 1px)
+    padding-left: 1rem
+    padding-right: 1rem
+    padding-top: calc(0.75rem - 1px)
     &:hover
-      border-bottom: 1px solid $link
-      border-top: 1px solid transparent
+      border-bottom-color: $primary
+      border-top-color: transparent
     &[data-am-bulma~="is-active"]
-      border-bottom: 3px solid $link
-      border-top: 3px solid transparent
-      color: $link
+      border-bottom: 3px solid $primary
+      color: $primary
+      padding-bottom: calc(0.75rem - 3px)
+  // Responsiveness
+  +desktop
+    &[data-am-bulma~="is-brand"]
+      padding-left: 0
 
 // Containers
 
-[data-am-bulma~="nav-menu"]
-  // Responsiveness
-  +mobile
-    background-color: $white
-    box-shadow: 0 4px 7px rgba($black, 0.1)
-    left: 0
-    display: none
-    right: 0
-    top: 100%
-    position: absolute
-    [data-am-bulma~="nav-item"]
-      border-top: 1px solid rgba($border, 0.5)
-      padding: 10px
-    &[data-am-bulma~="is-active"]
-      display: block
-  +tablet-only
-    padding-right: 20px
-
-[data-am-bulma~="nav-left"]
+[data-am-bulma~="nav-left"],
+[data-am-bulma~="nav-right"]
+  +overflow-touch
   align-items: stretch
   display: flex
-  flex-basis: 0
   flex-grow: 1
   flex-shrink: 0
+  max-width: 100%
+  overflow: auto
+  +widescreen
+    flex-basis: 0
+
+[data-am-bulma~="nav-left"]
   justify-content: flex-start
-  overflow: hidden
-  overflow-x: auto
   white-space: nowrap
+
+[data-am-bulma~="nav-right"]
+  justify-content: flex-end
 
 [data-am-bulma~="nav-center"]
   align-items: stretch
   display: flex
+  flex-grow: 0
+  flex-shrink: 0
   justify-content: center
   margin-left: auto
   margin-right: auto
 
-[data-am-bulma~="nav-right"]
+[data-am-bulma~="nav-menu"]
   // Responsiveness
-  +tablet
-    align-items: stretch
-    display: flex
-    flex-basis: 0
-    flex-grow: 1
-    flex-shrink: 0
-    justify-content: flex-end
+  +mobile
+    &[data-am-bulma~="nav-right"]
+      background-color: $white
+      box-shadow: 0 4px 7px rgba($black, 0.1)
+      left: 0
+      display: none
+      right: 0
+      top: 100%
+      position: absolute
+      [data-am-bulma~="nav-item"]
+        border-top: 1px solid rgba($border, 0.5)
+        padding: 0.75rem
+      &[data-am-bulma~="is-active"]
+        display: block
 
 // Main container
 
@@ -109,35 +111,15 @@ a[data-am-bulma~="nav-item"]
   align-items: stretch
   background-color: $white
   display: flex
-  min-height: $nav-height
+  height: $nav-height
   position: relative
   text-align: center
-  z-index: 2
+  z-index: 10
   & > [data-am-bulma~="container"]
     align-items: stretch
     display: flex
     min-height: $nav-height
     width: 100%
-    & > [data-am-bulma~="nav-left"]
-      & > [data-am-bulma~="nav-item"]:first-child:not([data-am-bulma~="is-tab"])
-        padding-left: 0
-    & > [data-am-bulma~="nav-right"]
-      & > [data-am-bulma~="nav-item"]:last-child:not([data-am-bulma~="is-tab"])
-        padding-right: 0
-  [data-am-bulma~="container > &"]
-    & > [data-am-bulma~="nav-left"]
-      & > [data-am-bulma~="nav-item"]:first-child:not([data-am-bulma~="is-tab"])
-        padding-left: 0
-    & > [data-am-bulma~="nav-right"]
-      & > [data-am-bulma~="nav-item"]:last-child:not([data-am-bulma~="is-tab"])
-        padding-right: 0
   // Modifiers
   &[data-am-bulma~="has-shadow"]
     box-shadow: 0 2px 3px rgba($black, 0.1)
-  // Responsiveness
-  +touch
-    & > [data-am-bulma~="container"],
-    [data-am-bulma~="container > &"]
-      & > [data-am-bulma~="nav-left"]
-        & > [data-am-bulma~="nav-item"][data-am-bulma~="is-brand"]:first-child
-          padding-left: 20px

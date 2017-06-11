@@ -1,32 +1,17 @@
-@import "../utilities/mixins.sass"
-@import "../utilities/variables.sass"
-
-[data-am-bulma~="media-number"],
 [data-am-bulma~="media-left"],
 [data-am-bulma~="media-right"]
+  flex-basis: auto
   flex-grow: 0
   flex-shrink: 0
 
-[data-am-bulma~="media-number"]
-  background-color: $background
-  border-radius: 290486px
-  display: inline-block
-  font-size: $size-medium
-  height: 32px
-  line-height: 24px
-  margin-right: 10px
-  min-width: 32px
-  padding: 4px 8px
-  text-align: center
-  vertical-align: top
-
 [data-am-bulma~="media-left"]
-  margin-right: 10px
+  margin-right: 1rem
 
 [data-am-bulma~="media-right"]
-  margin-left: 10px
+  margin-left: 1rem
 
 [data-am-bulma~="media-content"]
+  flex-basis: auto
   flex-grow: 1
   flex-shrink: 1
   text-align: left
@@ -36,29 +21,24 @@
   display: flex
   text-align: left
   [data-am-bulma~="content"]:not(:last-child)
-    margin-bottom: 10px
+    margin-bottom: 0.75rem
   [data-am-bulma~="media"]
     border-top: 1px solid rgba($border, 0.5)
     display: flex
-    padding-top: 10px
+    padding-top: 0.75rem
     [data-am-bulma~="content"]:not(:last-child),
     [data-am-bulma~="control"]:not(:last-child)
-      margin-bottom: 5px
+      margin-bottom: 0.5rem
     [data-am-bulma~="media"]
-      padding-top: 5px
+      padding-top: 0.5rem
       & + [data-am-bulma~="media"]
-        margin-top: 5px
+        margin-top: 0.5rem
   & + [data-am-bulma~="media"]
     border-top: 1px solid rgba($border, 0.5)
-    margin-top: 10px
-    padding-top: 10px
+    margin-top: 1rem
+    padding-top: 1rem
   // Sizes
   &[data-am-bulma~="is-large"]
     & + [data-am-bulma~="media"]
-      margin-top: 20px
-      padding-top: 20px
-  // Responsiveness
-  +tablet
-    &[data-am-bulma~="is-large"]
-      [data-am-bulma~="media-number"]
-        margin-right: 20px
+      margin-top: 1.5rem
+      padding-top: 1.5rem
