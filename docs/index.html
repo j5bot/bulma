@@ -24,7 +24,7 @@ route: index
       </h2>
       <pre id="npm"><code>npm install bulma</code></pre>
       <div id="ghbtns" class="block">
-        <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo=bulma&type=star&count=true&size=large" frameborder="0" scrolling="0" width="150px" height="30px"></iframe>
+        <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo=bulma&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
         <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo=bulma&type=fork&count=false&size=large" frameborder="0" scrolling="0" width="80px" height="30px"></iframe>
       </div>
       {% include carbon.html %}
@@ -48,7 +48,7 @@ route: index
   <div class="hero-body">
     <div class="container">
       <nav class="columns">
-        <a class="column has-text-centered" href="{{ site.baseurl }}/documentation/overview/responsiveness/">
+        <a class="column has-text-centered" href="{{ site.url }}/documentation/overview/responsiveness/">
           <span class="icon is-large" style="margin-right: -15px;">
             <i class="fa fa-mobile"></i>
           </span>
@@ -61,14 +61,14 @@ route: index
           <p class="title is-4"><strong>Responsive</strong></p>
           <p class="subtitle">Designed for <strong>mobile</strong>-first</p>
         </a>
-        <a class="column has-text-centered" href="{{ site.baseurl }}/documentation/overview/modular/">
+        <a class="column has-text-centered" href="{{ site.url }}/documentation/overview/modular/">
           <span class="icon is-large">
             <i class="fa fa-cubes"></i>
           </span>
           <p class="title is-4"><strong>Modular</strong></p>
           <p class="subtitle">Just import what you <strong>need</strong></p>
         </a>
-        <a class="column has-text-centered" href="{{ site.baseurl }}/documentation/grid/columns/">
+        <a class="column has-text-centered" href="{{ site.url }}/documentation/grid/columns/">
           <span class="icon is-large">
             <i class="fa fa-css3"></i>
           </span>
@@ -90,8 +90,8 @@ route: index
 <section class="section is-medium">
   <div class="container">
     <h3 class="title is-2">
-      <a href="{{ site.baseurl }}/documentation/grid/columns">
-        <span class="icon is-large">
+      <a href="{{ site.url }}/documentation/grid/columns">
+        <span class="icon is-medium">
           <i class="fa fa-pause"></i>
         </span>
         Simple <strong>columns</strong>
@@ -160,13 +160,17 @@ route: index
         </div>
       </div>
     </div>
-    <p class="control has-addons has-addons-centered">
-      <a id="add" class="button is-unselectable">Add column</a>
-      <a id="remove" class="button is-unselectable">Remove column</a>
-    </p>
+    <div class="field has-addons has-addons-centered">
+      <p class="control">
+        <a id="add" class="button is-unselectable">Add column</a>
+      </p>
+      <p class="control">
+        <a id="remove" class="button is-unselectable">Remove column</a>
+      </p>
+    </div>
     <div id="message" class="message is-info">
       <p class="message-header">Info</p>
-      <p class="message-body">While it's possible to add as many columns as you want, it is recommend to stick with <strong>12 columns</strong>.<br>
+      <p class="message-body">While it's possible to add as many columns as you want, it is recommended to stick with <strong>12 columns</strong>.<br>
       If you want smaller divisions, you can always <strong>nest</strong> columns.</p>
     </div>
     <div id="markup">
@@ -188,8 +192,8 @@ route: index
 <section class="section is-medium">
   <div class="container">
     <h3 class="title is-2">
-      <a href="{{ site.baseurl }}/documentation/grid/tiles">
-        <span class="icon is-large">
+      <a href="{{ site.url }}/documentation/grid/tiles">
+        <span class="icon is-medium">
           <i class="fa fa-th-large"></i>
         </span>
         Magic <strong>tiles</strong>
@@ -214,7 +218,7 @@ route: index
               <p class="title">Middle tile</p>
               <p class="subtitle">With an image</p>
               <figure class="image is-4by3">
-                <img src="http://placehold.it/640x480">
+                <img src="{{site.url}}/images/placeholders/640x480.png">
               </figure>
             </article>
           </div>
@@ -280,8 +284,8 @@ route: index
 <section class="section is-medium">
   <div class="container">
     <h3 class="title is-2">
-      <a href="{{ site.baseurl }}/documentation/components/level/">
-        <span class="icon is-large">
+      <a href="{{ site.url }}/documentation/components/level/">
+        <span class="icon is-medium">
           <i class="fa fa-arrows-h"></i>
         </span>
         Flexible <strong>horizontal level</strong>
@@ -301,12 +305,16 @@ route: index
           </a>
         </p>
         <div class="level-item">
-          <p class="control has-addons">
-            <input class="input" type="text" placeholder="Filter">
-            <button class="button">
-              Search
-            </button>
-          </p>
+          <div class="field has-addons">
+            <p class="control">
+              <input class="input" type="text" placeholder="Filter">
+            </p>
+            <p class="control">
+              <button class="button">
+                Search
+              </button>
+            </p>
+          </div>
         </div>
       </div>
       <div class="level-right">
@@ -344,8 +352,8 @@ route: index
     <div class="columns is-vcentered">
       <div class="column">
         <h3 class="title is-2">
-          <a href="{{ site.baseurl }}/documentation/components/media-object/">
-            <span class="icon is-large">
+          <a href="{{ site.url }}/documentation/components/media-object/">
+            <span class="icon is-medium">
               <i class="fa fa-magic"></i>
             </span>
             Versatile <strong>media object</strong>
@@ -359,7 +367,7 @@ route: index
           <article class="media">
             <div class="media-left">
               <figure class="image is-64x64">
-                <img src="http://placehold.it/128x128" alt="Image">
+                <img src="{{site.url}}/images/placeholders/128x128.png" alt="Image">
               </figure>
             </div>
             <div class="media-content">
@@ -370,7 +378,7 @@ route: index
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
                 </p>
               </div>
-              <nav class="level">
+              <nav class="level is-mobile">
                 <div class="level-left">
                   <a class="level-item">
                     <span class="icon is-small"><i class="fa fa-reply"></i></span>
@@ -405,8 +413,8 @@ route: index
   <div class="hero-body">
     <div class="container has-text-centered">
       <h3 class="title is-2">
-        <a href="{{ site.baseurl }}/documentation/layout/hero/">
-          <span class="icon is-large">
+        <a href="{{ site.url }}/documentation/layout/hero/">
+          <span class="icon is-medium">
             <i class="fa fa-arrows-v"></i>
           </span>
           Easy <strong>vertical centering</strong> in <strong>fullscreen</strong>
@@ -432,8 +440,8 @@ route: index
     <div class="columns is-vcentered">
       <div class="column">
         <h3 class="title is-2">
-          <a href="{{ site.baseurl }}/documentation/modifiers/syntax/">
-            <span class="icon is-large">
+          <a href="{{ site.url }}/documentation/modifiers/syntax/">
+            <span class="icon is-medium">
               <i class="fa fa-cogs"></i>
             </span>
             Compose your element with <strong>modifier</strong> classes
@@ -443,27 +451,35 @@ route: index
       </div>
       <div class="column">
         <div class="block">
-          <p class="control">
-            <code>button</code>
-          </p>
+          <div class="field">
+            <p class="control">
+              <code>button</code>
+            </p>
+          </div>
           <a class="button">Button</a>
         </div>
         <div class="block">
-          <p class="control">
-            <code>button is-primary</code>
-          </p>
+          <div class="field">
+            <p class="control">
+              <code>button is-primary</code>
+            </p>
+          </div>
           <a class="button is-primary">Button</a>
         </div>
         <div class="block">
-          <p class="control">
-            <code>button is-primary is-large</code>
-          </p>
+          <div class="field">
+            <p class="control">
+              <code>button is-primary is-large</code>
+            </p>
+          </div>
           <a class="button is-primary is-large">Button</a>
         </div>
         <div class="block">
-          <p class="control">
-            <code>button is-primary is-large is-loading</code>
-          </p>
+          <div class="field">
+            <p class="control">
+              <code>button is-primary is-large is-loading</code>
+            </p>
+          </div>
           <a class="button is-primary is-large is-loading">Button</a>
         </div>
       </div>
@@ -476,8 +492,8 @@ route: index
 <section class="section is-medium">
   <div class="container">
     <h3 class="title is-2">
-      <a href="{{ site.baseurl }}/documentation/elements/box/">
-        <span class="icon is-large">
+      <a href="{{ site.url }}/documentation/elements/box/">
+        <span class="icon is-medium">
           <i class="fa fa-asterisk"></i>
         </span>
         And all the usual <strong>elements</strong>
@@ -490,18 +506,18 @@ route: index
         <div class="card">
           <div class="card-image">
             <figure class="image is-4by3">
-              <img src="http://placehold.it/300x225" alt="">
+              <img src="{{site.url}}/images/placeholders/1280x960.png" alt="Image">
             </figure>
           </div>
           <div class="card-content">
             <div class="media">
               <div class="media-left">
-                <figure class="image is-32x32">
-                  <img src="http://placehold.it/64x64" alt="Image">
+                <figure class="image is-48x48">
+                  <img src="{{site.url}}/images/placeholders/96x96.png" alt="Image">
                 </figure>
               </div>
               <div class="media-content">
-                <p class="title is-5">Card</p>
+                <p class="title is-4">Card</p>
                 <p class="subtitle is-6">Subtitle</p>
               </div>
             </div>
@@ -517,7 +533,7 @@ route: index
       <div class="column">
         <p class="title">Title</p>
         <p class="subtitle">Subtitle</p>
-        <div class="control is-grouped">
+        <div class="field is-grouped">
           <p class="control">
             <span class="select">
               <select>
@@ -529,25 +545,31 @@ route: index
             <input class="input" type="text" placeholder="Text input">
           </p>
         </div>
-        <p class="control">
-          <label class="checkbox">
-            <input type="checkbox">
-            Checkbox
-          </label>
-        </p>
-        <p class="control">
-          <label class="radio">
-            <input type="radio" name="question">
-            Radio
-          </label>
-          <label class="radio">
-            <input type="radio" name="question">
-            Buttons
-          </label>
-        </p>
-        <p class="control">
-          <button class="button is-primary">Button</button>
-        </p>
+        <div class="field">
+          <p class="control">
+            <label class="checkbox">
+              <input type="checkbox">
+              Checkbox
+            </label>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <label class="radio">
+              <input type="radio" name="question">
+              Radio
+            </label>
+            <label class="radio">
+              <input type="radio" name="question">
+              Buttons
+            </label>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <a class="button is-primary">Button</a>
+          </p>
+        </div>
         <div class="tabs is-boxed">
           <ul>
             <li class="is-active">
@@ -577,9 +599,9 @@ route: index
           </ul>
         </div>
         <p class="block">
-          <span class="tag is-dark">Tag<button class="delete is-small"></button></span>
-          <span class="tag is-info">Two<button class="delete is-small"></button></span>
-          <span class="tag is-danger">Three<button class="delete is-small"></button></span>
+          <span class="tag is-dark">Tag<a class="delete is-small"></a></span>
+          <span class="tag is-info">Two<a class="delete is-small"></a></span>
+          <span class="tag is-danger">Three<a class="delete is-small"></a></span>
         </p>
         <div class="message is-warning">
           <div class="message-header">
@@ -590,7 +612,7 @@ route: index
           </div>
         </div>
         <div class="notification is-success">
-          <button class="delete"></button>
+          <a class="delete"></a>
           Success!
         </div>
       </div>

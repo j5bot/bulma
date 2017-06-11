@@ -22,10 +22,11 @@ doc-subtab: modular
         <br>
         The file is located in the <code>bulma/sass/grid</code> folder.
         <br>
-        Simply <strong>import</strong> it directly:
+        Simply <strong>import</strong> the utilities dependencies, and then the files you need directly:
       </p>
 {% highlight sass %}
-@import "bulma/sass/grid/columns.sass"
+@import "bulma/sass/utilities/_all"
+@import "bulma/sass/grid/columns"
 {% endhighlight %}
       <p>
         Now you can use the classes <code>.columns</code> (for the container) and <code>.column</code> directly:
@@ -46,6 +47,7 @@ doc-subtab: modular
         What if you only want the <strong>button</strong> styles instead?
       </p>
 {% highlight sass %}
+@import "bulma/sass/utilities/_all"
 @import "bulma/sass/elements/button.sass"
 {% endhighlight %}
       <p>
@@ -71,8 +73,8 @@ doc-subtab: modular
           <code>.is-link</code>
         </li>
         <li>
-          <code>.is-disabled</code>,
-          <code>.is-loading</code>
+          <code>.is-loading</code>,
+          <code>[disabled]</code>
         </li>
       </ul>
 {% highlight html %}
