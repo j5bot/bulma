@@ -45,6 +45,7 @@
   "files": [
     "css",
     "sass",
+    "src",
     "bulma.sass",
     "LICENSE",
     "README.md"
