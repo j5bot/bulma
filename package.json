@@ -1,14 +1,17 @@
 {
-  "name": "bulma",
+  "name": "bulma-attribute-selectors",
   "version": "0.4.2",
   "homepage": "http://bulma.io",
-  "author": "Jeremy Thomas <bbxdesign@gmail.com> (http://jgthms.com)",
+  "authors": [
+    "Jeremy Thomas <bbxdesign@gmail.com> (http://jgthms.com)",
+    "Jonathan 'J5' Cook <jonathan.j5.cook@gmail.com>"
+  ],
   "description": "Modern CSS framework based on Flexbox",
   "main": "bulma.sass",
   "style": "bulma/css/bulma.css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jgthms/bulma.git"
+    "url": "git+https://github.com/j5bot/bulma-attribute-selectors.git"
   },
   "license": "MIT",
   "keywords": [
@@ -19,7 +22,7 @@
     "framework"
   ],
   "bugs": {
-    "url": "https://github.com/jgthms/bulma/issues"
+    "url": "https://github.com/j5bot/bulma-attribute-selectors/issues"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
@@ -29,6 +32,7 @@
     "rimraf": "^2.6.1"
   },
   "scripts": {
+    "build-attr": "build",
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
     "build-autoprefix": "postcss --use autoprefixer --output css/bulma.css css/bulma.css",
     "build-clean": "rimraf css",
