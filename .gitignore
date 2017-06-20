@@ -13,6 +13,4 @@ node_modules
 logs
 
 # Attribute Selectors Stuff
-config.codekit
-config.codekit3
 bulma-attribute-selectors.log
